@@ -1,0 +1,8 @@
+<header>
+	<pageTemplate>
+	<frame id="first" x1="1cm" y1="2.5cm" width="19.0cm" height="23.0cm"/>
+  		<pageGraphics>	
+			<drawString x="17.7cm" y="2cm">Page <pageNumber/></drawString>	
+        	</pageGraphics>
+	</pageTemplate>
+</header>

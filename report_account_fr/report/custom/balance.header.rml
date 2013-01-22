@@ -1,0 +1,17 @@
+<header>
+	<pageTemplate>
+	<frame id="first" x1="1cm" y1="2.5cm" width="19.0cm" height="23.0cm"/>
+  		<pageGraphics>	
+			<setFont name="Helvetica" size="14"/>
+			<drawString x="1cm" y="27.8cm">[[ company.rml_header1 ]]</drawString>	
+			<setFont name="Helvetica" size="10"/>
+			<drawString x="15cm" y="27.8cm"> Imprimé le : [[ time.strftime('%Y-%m-%d') ]] à [[ time.strftime('%H:%M:%S') ]] </drawString>	
+			<setFont name="Helvetica" size="16"/>
+			<drawString x="5cm" y="26.8cm">Balance du [[ time.strftime('%d/%m/%Y', time.strptime(debut(data['form']), '%Y-%m-%d')) ]] au  [[ time.strftime('%d/%m/%Y', time.strptime(fin(data['form']), '%Y-%m-%d')) ]] </drawString>	
+			<setFont name="Helvetica" size="10"/>
+			<drawString x="17.7cm" y="2cm">Page <pageNumber/></drawString>	
+			
+			,
+        	</pageGraphics>
+	</pageTemplate>
+</header>

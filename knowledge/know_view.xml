@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<terp>
+<data>
+	-<record model="ir.ui.view" id="view_know_form">
+		<field name="name">know.form</field>
+		<field name="model">knowledge.knowledge</field>
+		<field name="type">form</field>
+		<field name="arch" type="xml">
+			<form string="Connaissance">
+				<field name="name" select="1" />
+				<newline/>
+				<field name="connaissance" select="1" />
+				<newline/>
+				<field name="dossier_id" select="1" />
+				<field name="redacteur" select="1" />
+			</form>
+		</field>
+	</record> 
+	-<record model="ir.ui.view" id="view_know_tree">
+		<field name="name">know.form</field>
+		<field name="model">knowledge.knowledge</field>
+		<field name="type">tree</field>
+		<field name="arch" type="xml">
+			<tree string="Connaissance">
+				<field name="name" select="1" />
+				<field name="connaissance" select="1" />
+				<field name="dossier_id" select="1" />
+				<field name="redacteur" select="1" />
+			</tree>
+		</field>
+	</record> 
+ <record model="ir.actions.act_window" id="action_know_form">
+         <field name="name">Connaissances</field>
+         <field name="type">ir.actions.act_window</field>
+         <field name="res_model">knowledge.knowledge</field>
+        </record>
+	 <menuitem name="Gestion Documentaire"/>
+	 <menuitem name="Gestion Documentaire/base de connaissances"  action="action_know_form" id="menu_know_form"/>
+	-<record model="ir.ui.view" id="view_knowfold_form">
+		<field name="name">know.form</field>
+		<field name="model">knowledge.folder</field>
+		<field name="type">form</field>
+		<field name="arch" type="xml">
+			<form string="Dossier Connaissance">
+				<field name="name" select="1" />
+				<newline/>
+				<field name="parent_id" select="1" />
+			</form>
+		</field>
+	</record>
+	-<record model="ir.ui.view" id="view_knowfold_tree">
+		<field name="name">know.form</field>
+		<field name="model">knowledge.folder</field>
+		<field name="type">tree</field>
+		<field name="arch" type="xml">
+			<tree string="Dossier Connaissance">
+				<field name="name" select="1" />
+				<newline/>
+				<field name="parent_id" select="1" />
+			</tree>
+		</field>
+	</record>
+	<record model="ir.actions.act_window" id="action_know_folders">
+		<field name="name">Dossier Connaissances</field>
+		<field name="type">ir.actions.act_window</field>
+		<field name="res_model">knowledge.folder</field>
+		<field name="view_type">tree</field>
+		<field name="view_id" ref="view_knowfold_tree"/>
+		<field name="domain">[('parent_id','=',False)]</field>
+	</record>
+	<record model="ir.actions.act_window" id="action_knowledge_by_folder">
+		<field name="res_model">knowledge.knowledge</field>
+		<field name="view_type">form</field>
+		<field name="view_mode">tree,form</field>
+		<field name="domain">[('dossier_id','child_of', [active_id])]</field>
+	</record>
+	<record model="ir.values" id="ir_action_knowledge_by_folder">
+		<field name="key2" eval="'tree_but_open'"/>
+		<field name="model" eval="'knowledge.folder'"/>
+		<field name="name">Connaissances</field>
+		<field name="value" eval="'ir.actions.act_window,%d'%action_knowledge_by_folder"/>
+		<field name="object" eval="True"/>
+	</record>
+	
+	
+	<menuitem
+		 name="Gestion Documentaire/Dossiers"
+		 sequence="1"
+		 action="action_know_folders"
+		 id="menu_knowledge_by_folder"/>
+
+</data>
+</terp>

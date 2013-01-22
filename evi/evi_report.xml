@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<terp>
+	<data>
+<!--		<report id="report_evi_invoice" 
+			string="Facture EVI"
+			model="account.invoice" 
+			name="evi.invoice"
+			rml="evi/report/invoice.rml"
+			auto="True"/>-->
+		<report id="report_evi_lines" 
+			string="Lignes d'ecriture" 
+			model="account.move.line" 
+			name="evi.lines" 
+			rml="evi/report/lines.rml"
+			auto="True"/>
+	</data>
+</terp>

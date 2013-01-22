@@ -1,0 +1,93 @@
+<?xml version="1.0"?>
+<terp>
+	<data>
+		<report id="report_account_fr_resultat"
+			string="Système de base : Compte de resultat"
+			model="report.account.fr.lignes"
+			name="report.account.fr.resultat"
+			rml="report_account_fr/report/compte_de_resultat.rml"
+			auto="True"
+			menu="True"
+			/>
+		<wizard  id="wizard_report_account_fr_resultat_report"
+			string="Système de base : Compte de resultat" 
+			model="report.account.fr.lignes"
+			name="report.account.fr.resultat.report"
+			keyword="client_print_multi"
+			/>
+	    
+	    <report id="report_account_fr_Bilan"
+			string="Système de base : Bilan"
+			model="report.account.fr.lignes"
+			name="report.account.fr.bilan"
+			rml="report_account_fr/report/bilan.rml"
+			auto="True"
+			menu="True"
+			/>
+		<wizard  id="wizard_report_account_fr_bilan_report"
+			string="Système de base : Bilan" 
+			model="report.account.fr.lignes"
+			name="report.account.fr.bilan.report"
+			keyword="client_print_multi"
+			/>
+			
+		<report id="report_account_fr_balance"
+			string="Balance"
+			model="report.account.fr.lignes"
+			name="report.account.fr.balance"
+			rml="report_account_fr/report/balance.rml"
+			auto="True"
+			menu="True"
+			/>
+		<wizard  id="wizard_report_account_fr_balance_report"
+			string="Balance" 
+			model="report.account.fr.lignes"
+			name="report.account.fr.balance.report"
+			keyword="client_print_multi"
+			/>
+		<report id="report_account_fr_balanceclients"
+			string="Balance Clients"
+			model="report.account.fr.lignes"
+			name="report.account.fr.balanceclients"
+			rml="report_account_fr/report/balanceclients.rml"
+			auto="True"
+			menu="True"
+			/>
+		<wizard  id="wizard_report_account_fr_balanceclients_report"
+			string="Balance Clients" 
+			model="report.account.fr.lignes"
+			name="report.account.fr.balanceclients.report"
+			keyword="client_print_multi"
+			/>
+		<report id="report_account_fr_balancefournisseurs"
+			string="Balance Fournisseurs"
+			model="report.account.fr.lignes"
+			name="report.account.fr.balancefournisseurs"
+			rml="report_account_fr/report/balancefournisseurs.rml"
+			auto="True"
+			menu="True"
+			/>
+		<wizard  id="wizard_report_account_fr_balancefournisseurs_report"
+			string="Balance Fournisseurs" 
+			model="report.account.fr.lignes"
+			name="report.account.fr.balancefournisseurs.report"
+			keyword="client_print_multi"
+			/>
+
+		<report id="report_account_fr_grandlivre"
+			string="Grand Livre"
+			model="account.move.line"
+			name="report.account.fr.grandlivre"
+			rml="report_account_fr/report/grandlivre.rml"
+			auto="True"
+			menu="True"
+			/>
+		<wizard  id="wizard_report_account_fr_grandlivre_report"
+			string="Grand Livre" 
+			model="account.move.line"
+			name="report.account.fr.grandlivre.report"
+			keyword="client_print_multi"
+			/>
+		
+	</data>
+</terp>

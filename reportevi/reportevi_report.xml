@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<terp>
+	<data>
+		<report id="reportevi_compteannuel"
+			string="Compte de resultat"
+			model="reportevi.resultat"
+			name="reportevi_compte_de_resultat"
+			rml="reportevi/report/compte_de_resultat.rml"
+			auto="True"
+			/>
+
+	</data>
+</terp>

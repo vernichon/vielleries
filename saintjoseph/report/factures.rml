@@ -1,0 +1,124 @@
+<?xml version="1.0"?>
+<document filename="test.pdf">
+  <template pageSize="(595.0,842.0)" title="Test" author="Martin Simon" allowSplitting="20">
+    <pageTemplate id="first">
+      <frame id="first" x1="57.0" y1="57.0" width="481" height="728"/>
+    </pageTemplate>
+  </template>
+  <stylesheet>
+    <blockTableStyle id="Standard_Outline">
+      <blockAlignment value="LEFT"/>
+      <blockValign value="TOP"/>
+    </blockTableStyle>
+    <blockTableStyle id="Table1">
+      <blockAlignment value="LEFT"/>
+      <blockValign value="TOP"/>
+      <blockBackground colorName="#e6e6e6" start="0,0" stop="0,0"/>
+      <blockBackground colorName="#e6e6e6" start="1,0" stop="1,0"/>
+      <blockBackground colorName="#e6e6e6" start="2,0" stop="2,0"/>
+    </blockTableStyle>
+    <blockTableStyle id="Lignes">
+      <blockAlignment value="LEFT"/>
+      <blockValign value="TOP"/>
+      <lineStyle kind="GRID" colorName="black"/>
+    </blockTableStyle>
+    <initialize>
+      <paraStyle name="all" alignment="justify"/>
+    </initialize>
+    <paraStyle name="P1" fontName="Times-Roman" fontSize="20.0" leading="25" alignment="CENTER" spaceBefore="0.0" spaceAfter="6.0"/>
+    <paraStyle name="P2" fontName="Times-Roman" alignment="RIGHT" spaceBefore="0.0" spaceAfter="6.0"/>
+    <paraStyle name="P3" fontName="Times-Roman" fontSize="10.0" leading="13" alignment="CENTER" spaceBefore="0.0" spaceAfter="6.0"/>
+    <paraStyle name="P4" fontName="Times-Roman" fontSize="11.0" leading="14" alignment="RIGHT" spaceBefore="0.0" spaceAfter="6.0"/>
+    <paraStyle name="P5" fontName="Times-Roman" fontSize="8.0" leading="10"/>
+    <paraStyle name="P6" fontName="Times-Roman" fontSize="8.0" leading="10"/>
+    <paraStyle name="P7" fontName="Times-Roman" alignment="RIGHT" spaceBefore="0.0" spaceAfter="6.0"/>
+    <paraStyle name="P8" fontName="Times-Roman" alignment="CENTER" spaceBefore="0.0" spaceAfter="6.0"/>
+    <paraStyle name="Standard" fontName="Times-Roman"/>
+    <paraStyle name="Heading" fontName="Times-Roman" fontSize="14.0" leading="17" spaceBefore="12.0" spaceAfter="6.0"/>
+    <paraStyle name="Text body" fontName="Times-Roman" spaceBefore="0.0" spaceAfter="6.0"/>
+    <paraStyle name="List" fontName="Times-Roman" spaceBefore="0.0" spaceAfter="6.0"/>
+    <paraStyle name="Caption" fontName="Times-Roman" fontSize="12.0" leading="15" spaceBefore="6.0" spaceAfter="6.0"/>
+    <paraStyle name="Index" fontName="Times-Roman"/>
+    <paraStyle name="Table Contents" fontName="Times-Roman" spaceBefore="0.0" spaceAfter="6.0"/>
+  </stylesheet>
+  <story>
+    <para style="Table Contents">
+      <font color="white"> </font>
+    </para>
+    <para style="P5">
+      <font color="white"> </font>
+    </para>
+    <blockTable colWidths="73.0,248.0,161.0" repeatRows="1" style="Table1">
+      <tr>
+        <td>
+          <para style="Table Contents">
+            <font color="white"> </font>
+          </para>
+        </td>
+        <td>
+          <para style="P1">État de facturation</para>
+        </td>
+        <td>
+          <para style="P2">[[ periode(data['form']) ]]</para>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <para style="Table Contents">Saint Joseph</para>
+        </td>
+        <td>
+          <para style="P3">
+            <font color="white"> </font>
+          </para>
+        </td>
+        <td>
+          <para style="P4">
+            <font color="white"> </font>
+          </para>
+        </td>
+      </tr>
+    </blockTable>
+    <para style="Standard">
+      <font color="white"> </font>
+    </para>
+    <para style="Standard">
+      <font color="white"> </font>
+    </para>
+    <blockTable colWidths="94.0,260.0,128.0" style="Lignes">
+      <tr>
+        <td>
+          <para style="P8">Date de facture</para>
+        </td>
+        <td>
+          <para style="P8">Libellé</para>
+        </td>
+        <td>
+          <para style="P8">Total</para>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <para style="P5">[[ repeatIn(lesfactures(data['form']), 'ligne') ]]</para>
+          <para style="P5">[[ ligne['date_invoice'] ]]</para>
+          <para style="Standard">
+            <font color="white"> </font>
+          </para>
+        </td>
+        <td>
+          <para style="Table Contents">[[ ligne['name'] ]]</para>
+        </td>
+        <td>
+          <para style="P2">[[ '%.2f' % ( ligne['amount_total']) ]]</para>
+        </td>
+      </tr>
+    </blockTable>
+    <para style="Standard">
+      <font color="white"> </font>
+    </para>
+    <para style="Standard">
+      <font color="white"> </font>
+    </para>
+    <para style="Standard">Total facturation : [[ '%.2f' % total(data['form']) ]]</para>
+  </story>
+</document>
+

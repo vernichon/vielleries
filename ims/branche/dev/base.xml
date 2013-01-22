@@ -1,0 +1,9 @@
+<record model="res.company" id="main_company">
+         <field name="name">Intermédiasud</field>
+         <field name="partner_id" ref="main_partner"/>
+         <field name="rml_header1">SAEM - Intermédiasud</field>
+         <field name="rml_footer1">Espace du Causse - 81115 CASTRES - Tél. 05 63 73 50 13 - Fax 05 63 73 50 14 - E.mail : courrier@e-teleport.net</field>
+         <field name="rml_footer2">Société Anonyme d'Economie Mixte au capital de 808482 ¤ - R.C.S. B414 273 219 - SIRET 414 273 219 00025</field>
+         <field name="currency_id" ref="EUR"/>
+</record>
+

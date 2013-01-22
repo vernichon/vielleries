@@ -1,0 +1,738 @@
+﻿<?xml version="1.0"?>
+<terp>
+<data>
+	<delete model="ir.ui.view" search="[('name','like','%ims%')]"/>
+	<delete model="ir.ui.view" search="[('name','like','res.partner.form')]"/>
+	<delete model="ir.actions.act_window" search="[('name','like','%ims%')]"/>
+	<menuitem name="IMS" sequence="0" icon="terp-partner" id="menu_base_ims"/>
+	<menuitem name="IMS/Configuration" groups="admin"/>
+	<menuitem name="IMS/Clients" />
+	<menuitem name="IMS/Box" />
+	
+   <record model="ir.ui.view" id="view_clients_ims">
+        <field name="name">res.partner.form</field>
+            <field name="model">res.partner</field>
+           <field name="arch" type="xml" >
+          	<form string="Partners" >
+			<notebook>
+				<page string="General">
+					<field name="name" select="1"/>
+					<field name="title" domain="[('domain', '=', 'partner')]"/>
+					<field name="ref" select="1"/>
+					<field name="lang" select="2"/>
+					<newline/>
+					<separator string="Categories" colspan="4"/>
+					<field name="category_id" colspan="4" select="2" nolabel="1"/>
+				</page>
+				 <page string="Details" >
+                    <field name="mandat" select="1" />
+                    <field name="etatclient" select="1" />
+                    <field name="foncclient" select="1" />
+                    <field name="statusclient" select="1" />
+                    <field name="typeclient" select="1" />
+                    <field name="codeape" select="1" />
+                </page>
+                <page string="Sites" >
+                    <field name="site" select="1" nolabel="1" />
+                </page>
+                <page string="Contrats" >
+                    <field name="contrat" select="1" nolabel="1"/>
+                </page>
+              <page string="Contacts">
+                    <field name="address" mode="form,tree" colspan="4" nolabel="1" select="1">
+                        <form string="Partner contacts">
+                            <field name="name" select="2"/>
+                            <field name="title" domain="[('domain', '=', 'contact')]"/>
+                            <field name="function"/>
+                            <field name="type" select="2"/>
+                            <field name="street" select="2"/>
+                            <field name="street2"/>
+                            <newline/>
+                            <field name="zip" select="2"/>
+                            <field name="city" select="2"/>
+                            <newline/>
+                            <field name="country_id" select="2"/>
+                            <field name="state_id" select="2"/>
+                            <newline/>
+                            <field name="phone"/>
+                            <field name="fax"/>
+                            <newline/>
+                            <field name="mobile"/>
+                            <field name="email" select="2" widget="email" />
+                        </form>
+                    </field>
+                </page> 
+				<page string="Extra Info">
+					<field name="active" select="2" />
+					<newline/>
+					<field name="credit_limit"/>
+					<field name="user_id" select="2"/>
+					<field name="parent_id"/>
+					<field name="website" widget="url"/>
+					<field name="date" select="2"/>
+					<field name="bank_ids" colspan="4" nolabel="1">
+						<form string="Bank account">
+							<field name="state" select="2"/>
+							<field name="name" select="2"/>
+							<newline/>
+							<field name="acc_number" select="1"/>
+							<newline/>
+							<field name="bank"/>
+							<newline/>
+							<separator string="Bank account owner" colspan="4"/>
+							<field name="owner_name" colspan="4"/>
+							<field name="street" colspan="4"/>
+							<field name="city"/>
+							<field name="zip"/>
+							<field name="country_id"/>
+						</form>
+					  <tree string="Bank Details">
+						<field name="state"/>
+						<field name="owner_name"/>
+						<field name="acc_number"/>
+					  </tree>
+					</field>
+					<separator string="Notes" colspan="4"/>
+					<field name="comment" colspan="4" nolabel="1"/>
+				</page>
+				<page string="Event History">
+					<field name="events" colspan="4" nolabel="1" widget="one2many_list"/>
+				</page>
+				<page string="Properties">
+					<properties/>
+				</page>
+			</notebook>
+			</form>
+        </field>
+        </record> 
+	
+	
+	<record model="ir.actions.act_window" id="res_partner_category_normal_action_tree">
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">res.partner.category.rel</field>
+			<field name="view_type">form</field>
+			<field name="view_mode">tree,form</field>
+			<field name="domain">[('categ_id','=',[active_id])]</field>
+		</record>
+	<record model="ir.values" id="ir_partner_category_open">
+			<field name="key2" eval="'tree_but_open'"/>
+			<field name="model" eval="'res.partner.category'"/>
+			<field name="name">Products by Categories</field>
+			<field name="value" eval="'ir.actions.act_window,%d'%res_partner_category_normal_action_tree"/>
+			<field name="object" eval="True"/>
+		</record>
+
+	<!--
+		Modfication Mouvement de Stock
+	-->
+	<record model="ir.ui.view" id="view_move_stock_ims_form">
+  		<field name="name">stock.picking.form.inherit2</field> 
+    		<field name="model">stock.picking</field> 
+      		<field name="type">form</field> 
+        	<field name="inherit_id" ref="stock.view_picking_form" /> 
+	 	<field name="arch" type="xml">
+			<field name="move_lines" position="replace">
+			<field name="move_lines" widget="one2many_list" colspan="4" nolabel="1" >
+				<form string="Stock Moves"  >
+								<separator string="Move Information" colspan="4"/>
+								<field name="product_id" colspan="4" select="1" on_change="onchange_product_id(product_id, parent.location_id, parent.location_dest_id)" context="location=parent.location_id"/>
+								<field name="product_uom" select="1"/>
+								<field name="product_qty" select="1"/>
+								<field name="product_uos" />
+								<field name="product_uos_qty" />
+								<field name="name" select="1" colspan="4"/>
+								<field name="date"/>
+								<field name="date_planned"/>
+								<field name="priority"/>
+								<field name="lot_id" select="1"/>
+								<field name="location_id" select="1"/>
+								<field name="location_dest_id" select="1"/>
+								<field name="address_id" select="1" /> 
+								<field name="product_packaging"/>
+								<field name="prodlot_id" select="1" context="product_id=product_id" />
+								<field name="tracking_id" select="1" />
+								
+								<field name="site_id"/>
+								<newline/>
+								<label/>
+								<button type="action" name="%(stock.track_line)d" string="Split in production lots" />
+								<separator string="Move State" colspan="4"/>
+								<field name="state" select="1"/>
+								<group>
+									<button name="force_assign" string="Force assignation" states="confirmed" type="object"/>
+									<button name="cancel_assign" string="Cancel assignation" states="assigned" type="object"/>
+								</group>
+				</form>
+				</field>
+			</field>
+		</field>
+    	</record>
+ <!--	<record model="ir.actions.act_window" id="action_stock_move_action">
+		<field name="name">Mouvements</field>
+		<field name="type">ir.actions.act_window</field>
+		<field name="res_model">stock.move</field>
+		<field name="view_id" ref="view_move_stock_ims_form"/>
+		<field name="view_mode">form,tree</field>
+	</record>-->
+	
+ 	<!--
+		Modfication fiche client
+	-->
+	<record model="ir.ui.view" id="view_crm_ims">
+  		<field name="name">crm.case.form.inherit2</field> 
+    		<field name="model">crm.case</field> 
+      		<field name="type">form</field> 
+        	<field name="inherit_id" ref="crm.crm_case-view" /> 
+	 	<field name="arch" type="xml">
+				<field name="partner_id" position="before">	
+				  	<field name="appel" select="1" />
+					<field name="site" select="1" />
+				</field>
+		</field>
+       </record>
+
+<record model="ir.ui.view" id="view_partner_ims_category_tree">
+        <field name="name">res.partner.category.tree</field>
+        <field name="model">res.partner.category</field>
+        <field name="type">tree</field>
+        <field name="field_parent">child_ids</field>
+        <field name="arch" type="xml">
+            <tree string="Partner Categories">
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+
+     <record model="ir.actions.act_window" id="action_partner_ims_category">
+        <field name="name">Partner categories</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">res.partner.category</field>
+        <field name="view_type">tree</field>
+        <field name="view_id" ref="view_partner_ims_category_tree"/>
+        <field name="domain">[('parent_id','=',False)]</field>
+    </record>
+
+	
+	<record model="ir.actions.act_window" id="action_partner_ims_by_category">
+        <field name="res_model">res.partner</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+        <field name="domain">[('category_id','child_of', [active_id])]</field>
+    </record>
+    <record model="ir.values" id="ir_action_partner_ims__by_category">
+        <field name="key2" eval="'tree_but_open'"/>
+        <field name="model" eval="'res.partner.category'"/>
+        <field name="name">Open partners</field>
+        <field name="value" eval="'ir.actions.act_window,%d'%action_partner_ims_by_category"/>
+        <field name="object" eval="True"/>
+    </record>
+
+
+    <menuitem
+        name="IMS/Partenaires par Categorie"
+        sequence="1"
+        action="action_partner_ims_category"
+        id="menu_partner_ims_category_main"/>
+
+    
+    
+	<record model="ir.ui.view" id="view_category_tree">
+		<field name="name">report.category.client.tree</field>
+		<field name="model">report.category.client</field>
+		<field name="type">tree</field>
+		<field name="arch" type="xml">
+			<tree string="Attribut">
+				<field name="name"/>
+				<field name="client"/>
+				
+			</tree>
+		</field>
+	</record>
+	<record model="ir.actions.act_window" id="action_category_tree">
+                <field name="name">report.category.client.tree</field>
+                <field name="type">ir.actions.act_window</field>
+                <field name="res_model">report.category.client</field>
+                <field name="view_type">tree</field>
+        </record>
+	<menuitem name="Partners/Categorie" action="action_category_tree" id="menu_category_tree"/>
+	
+	<record model="ir.ui.view" id="view_ims_attribut_tree">
+		<field name="name">ims.attribut.tree</field>
+		<field name="model">ims.attribut</field>
+		<field name="type">tree</field>
+		<field name="arch" type="xml">
+			<tree string="Attribut">
+				<field name="name"/>
+				<field name="box_id"/>
+				<field name="valeur"/>
+				<field name="valeursaga"/>
+			</tree>
+		</field>
+	</record>
+	<record model="ir.actions.act_window" id="action_ims_attribut_tree">
+                <field name="name">ims.attribut.tree</field>
+                <field name="type">ir.actions.act_window</field>
+                <field name="res_model">ims.attribut</field>
+                <field name="view_type">tree</field>
+        </record>
+	<menuitem name="IMS/Box/Attribut-Box" action="action_ims_attribut_tree" id="menu_ims_attribut_tree"/>
+
+	<record model="ir.ui.view" id="view_ims_log_tree">
+		<field name="name">ims.log.tree</field>
+		<field name="model">ims.log</field>
+		<field name="type">tree</field>
+		<field name="arch" type="xml">
+			<tree string="Attribut">
+				<field name="name"/>
+				<field name="box_id"/>
+				<field name="log"/>
+			</tree>
+		</field>
+	</record>
+	<record model="ir.ui.view" id="view_ims_log_form">
+		<field name="name">ims.log.form</field>
+		<field name="model">ims.log</field>
+		<field name="type">form</field>
+		<field name="arch" type="xml">
+			<form string="Attribut">
+				<field name="name"/>
+				<field name="log"/>
+			</form>
+		</field>
+	</record>
+	<record model="ir.actions.act_window" id="action_ims_log_tree">
+                <field name="name">ims.log.tree</field>
+                <field name="type">ir.actions.act_window</field>
+                <field name="res_model">ims.log</field>
+                <field name="view_type">tree</field>
+        </record>
+	<menuitem name="IMS/Box/Log" action="action_ims_log_tree" id="menu_ims_log_tree"/>
+	
+	<record model="ir.ui.view" id="view_ims_attribut_form">
+		<field name="name">ims.attribut.form</field>
+		<field name="model">ims.attribut</field>
+		<field name="type">form</field>
+		<field name="arch" type="xml">
+			<form string="Attribut">
+				<field name="name"/>
+				<field name="valeur"/>
+			</form>
+		</field>
+	</record>
+
+	<record model="ir.ui.view" id="view_box_form">
+			<field name="name">ims.box.form</field>
+			<field name="model">ims.box</field>
+			<field name="type">form</field>
+			<field name="arch" type="xml">
+				<form string="IMS BOX">
+					<notebook>
+						<page string="Information">
+							<field name="name" select="1"/>
+							<field name="default_code" select="1"/>
+							<field name="identifiant" select="1" />
+							<field name="client" select="1" />
+							<field name="site" select="1" />
+							<field name="fournisseur" select="1" />
+							<field name="categ_id" select="1"/>
+							<field name="type" select="1"/>
+							<newline/>
+							<field name="attributs"  widget="one2many_list" colspan="3" />
+							<button name="valid_box" string="Valide Box" colspan="2" type="object" /> 
+							<button name="log_box" string="Valeur Saga" colspan="2" type="object" /> 
+							<newline/>
+							<field name="product_manager"/>
+							<field name="date_reception"/>
+						</page>
+						<page string="Procurement (days)">
+							<field name="supply_method" select="1"/>
+							<field name="active" select="1"/>
+							<newline/>
+							<field name="sale_delay" select="1"/>
+							<field name="sale_ok" select="1"/>
+							<field name="produce_delay" select="1"/>
+							<field name="purchase_ok" select="1"/>
+							<field name="warranty"/>
+							<field name="rental" select="1"/>
+							<field name="list_price"/>
+							<newline/>
+							<field name="standard_price"/>
+							<field name="cost_method"/>
+							<!-- 
+							<field name="price_margin"/>
+							<field name="price_extra"/>
+							-->
+							<field name="uos_id" />
+							<field name="uos_coeff" />
+							<newline />
+							<field name="seller_ids" colspan="4" select="1" nolabel="1" widget="one2many_list"/>
+						</page>
+						<page string="Descriptions">
+							<separator string="Description" />
+							<field name="description" colspan="4" nolabel="1" />
+							<separator string="Sale Description"/>
+							<field name="description_sale" colspan="4" nolabel="1"/>
+							<separator string="Purchase Description"/>
+							<field name="description_purchase" colspan="4" nolabel="1"/>
+						</page>
+						<page string="Packaging">
+							<field name="mes_type" />
+							<field name="tracking" />
+							<field name="packaging" colspan="4" nolabel="1" widget="one2many_list" />
+						</page>
+						<page string="Properties">
+							<properties/>
+						</page>
+					</notebook>
+				</form>
+			</field>
+		</record>
+
+	<record model="ir.actions.act_window" id="action_ims_box_form">
+                <field name="name">Box</field>
+                <field name="type">ir.actions.act_window</field>
+                <field name="res_model">ims.box</field>
+                <field name="view_type">form</field>
+	</record>
+	<menuitem name="IMS/Box/Box" action="action_ims_box_form" id="menu_ims_box_form"/>
+	 
+
+	<!--  
+		Type
+	-->
+	<record model="ir.ui.view" id="view_ims_type_form">
+                <field name="name">ims.type.form</field>
+                <field name="model">ims.type</field>
+                <field name="type">form</field>
+                <field name="arch" type="xml">
+                        <form string="types">
+                                <field name="name" colspan="4" select="1"/>                    
+                        </form>
+                </field>
+        </record>
+        <record model="ir.ui.view" id="view_ims_type_tree">
+                <field name="name">ims.type.tree</field>
+                <field name="model">ims.type</field>
+                <field name="type">tree</field>
+                <field name="arch" type="xml">
+                        <tree string="type">
+				<field name="name" colspan="4" select="1"/>
+                        </tree>
+                </field>
+        </record>
+	<record model="ir.actions.act_window" id="action_ims_type_form">
+                <field name="name">ims.type.form</field>
+                <field name="type">ir.actions.act_window</field>
+                <field name="res_model">ims.type</field>
+                <field name="view_type">form</field>
+        </record>
+	<menuitem name="IMS/Configuration/Types" groups="admin" action="action_ims_type_form" id="menu_ims_type_form"/>
+	
+	<record model="ir.ui.view" id="view_ims_type_contrat_form">
+                <field name="name">ims.type.contrat.form</field>
+                <field name="model">ims.type.contrat</field>
+                <field name="type">form</field>
+                <field name="arch" type="xml">
+                        <form string="types">
+                                <field name="name" colspan="4" select="1"/>                    
+                        </form>
+                </field>
+        </record>
+        <record model="ir.ui.view" id="view_ims_type_contrat_tree">
+                <field name="name">ims.type.contrat.tree</field>
+                <field name="model">ims.type.contrat</field>
+                <field name="type">tree</field>
+                <field name="arch" type="xml">
+                        <tree string="type">
+				<field name="name" colspan="4" select="1"/>
+                        </tree>
+                </field>
+        </record>
+	<record model="ir.actions.act_window" id="action_ims_type_contrat_form">
+                <field name="name">ims.type.contrat.form</field>
+                <field name="type">ir.actions.act_window</field>
+                <field name="res_model">ims.type.contrat</field>
+                <field name="view_type">form</field>
+        </record>
+	<menuitem name="IMS/Configuration/Types Contrat" groups="admin" action="action_ims_type_contrat_form" id="menu_ims_type_contrat_form"/>
+	
+	<record model="ir.ui.view" id="view_ims_type_offre_form">
+                <field name="name">ims.type.offre.form</field>
+                <field name="model">ims.type.offre</field>
+                <field name="type">form</field>
+                <field name="arch" type="xml">
+                        <form string="types">
+                                <field name="name" colspan="4" select="1"/>                    
+                        </form>
+                </field>
+        </record>
+        <record model="ir.ui.view" id="view_ims_type_offre_tree">
+                <field name="name">ims.type.offre.tree</field>
+                <field name="model">ims.type.offre</field>
+                <field name="type">tree</field>
+                <field name="arch" type="xml">
+                        <tree string="type">
+				<field name="name" colspan="4" select="1"/>
+                        </tree>
+                </field>
+        </record>
+	<record model="ir.actions.act_window" id="action_ims_type_offre_form">
+                <field name="name">ims.type.offre.form</field>
+                <field name="type">ir.actions.act_window</field>
+                <field name="res_model">ims.type.offre</field>
+                <field name="view_type">form</field>
+        </record>
+	<menuitem name="IMS/Configuration/Types Offre" groups="admin" action="action_ims_type_offre_form" id="menu_ims_type_offre_form"/>
+	<!--  
+		Site
+	-->
+
+	<record model="ir.ui.view" id="view_ims_site_form">
+		<field name="name">ims.site.form</field>
+		<field name="model">ims.site</field>
+		<field name="type">form</field>
+		<field name="arch" type="xml">
+			<form string="Partner SITE">
+			<notebook>
+			<page string="Propriétés">
+                                <field name="codesite" colspan="4" select="1"/>
+				<field name="name" colspan="4" select="1"/>
+				<newline/>
+				<field name="partner_id" />
+                                <field name="contract_id" />
+				<newline/>
+				<field name="ape"/>
+				<field name="street" select="1"/>
+				<field name="street2"/>
+				<field name="state_id" select="1"/>
+				<field name="bp"/>
+				<field name="zip"/>
+				<field name="city"/>
+				<field name="country_id"/>
+				<field name="email" select="1"/>
+				<field name="phone" select="1"/>
+				<field name="phonecontact" select="1"/>
+				<field name="stock" select="1"/>
+			</page>
+			<page string="Produits" >
+				<field name="mouvement" select="1" nolabel="1" />
+			</page>
+			</notebook>
+			</form>
+		</field>
+	</record>
+	<record model="ir.ui.view" id="view_ims_site_tree">
+		<field name="name">ims.site.tree</field>
+                <field name="model">ims.site</field>
+                <field name="type">tree</field>
+		<field name="arch" type="xml">
+                        <tree string="Partner SITE">
+                                <field name="codesite" select="1"/>
+                                <field name="name" />
+                                <field name="partner_id" />
+                                <field name="city" select="1"/>
+                        </tree>
+                </field>
+	</record>
+	<record model="ir.actions.act_window" id="action_ims_site_action">
+		<field name="name">Site</field>
+		<field name="type">ir.actions.act_window</field>
+		<field name="res_model">ims.site</field>
+		<field name="view_mode">tree,form</field>
+	</record>
+	<menuitem name="IMS/Clients/Site" groups="admin,user" action="action_ims_site_action" id="menu_ims_site"/>
+	
+	<record model="ir.ui.view" id="view_ims_contrat_form">
+		<field name="name">ims.contrat.form</field>
+		<field name="model">ims.contrat</field>
+		<field name="type">form</field>
+		<field name="arch" type="xml">
+			<form string="Partner Contrat">
+                                <notebook>
+                                        <page string="Contrat">
+                                                <field name="name" select="1"/>
+                                                <field name="partner_id" select="1"/>
+                                                <field name="signataire" select="1"/>
+                                                <field name="id_avenant" select="1"/>
+                                                <field name="type_contrat" select="1"/>
+                                                <field name="duree_contrat" select="1"/>
+                                                <field name="date_debut_ave" select="1"/>
+                                                <field name="date_fin_ave" select="1"/>
+                                                <field name="date_abon" select="1"/>
+                                                <field name="objet_contrat" select="1"/>
+                                                <field name="date_signature" select="1"/>
+                                                <field name="offre" select="1"/>
+                                                <field name="apa" select="1"/>
+                                                <field name="date_resil" select="1"/>
+                                                <field name="date_install" select="1"/>
+                                                <field name="date_effective" select="1"/>
+                                                <field name="suivi" colspan="3" select="1"/>
+                                        </page>
+                                        <page string="Sites">
+                                                <field name="site" select="1"/>
+                                        </page>
+                                </notebook>
+			</form>
+		</field>
+	</record>
+	<record model="ir.ui.view" id="view_ims_contrat_tree">
+		<field name="name">ims.contrat.tree</field>
+                <field name="model">ims.contrat</field>
+                <field name="type">tree</field>
+		<field name="arch" type="xml">
+                        <tree string="Partner Contrat">
+				<field name="name" select="1"/>Site
+				<field name="partner_id" select="1"/>
+				<field name="id_avenant" select="1"/>
+				<field name="type_contrat" select="1"/>
+				<field name="duree_contrat" select="1"/>
+				<field name="date_debut_ave" select="1"/>
+				<field name="date_fin_ave" select="1"/>
+				<field name="date_abon" select="1"/>
+				<field name="objet_contrat" select="1"/>
+				<field name="date_signature" select="1"/>
+				<field name="offre" select="1"/>
+				<field name="apa" select="1"/>
+				<field name="date_resil" select="1"/>
+				<field name="date_install" select="1"/>
+				<field name="date_effective" select="1"/>
+				<field name="suivi"  select="1"/>
+                        </tree>
+                </field>
+	</record>
+	<record model="ir.actions.act_window" id="action_ims_contrat_action">
+		<field name="name">Contrat</field>
+		<field name="type">ir.actions.act_window</field>
+		<field name="res_model">ims.contrat</field>
+		<field name="view_type">form</field>
+	</record>
+	<menuitem name="IMS/Clients/Contrat" groups="admin,user" action="action_ims_contrat_action" id="menu_ims_contrat_form"/>
+	<!--  
+		Attribut
+	-->
+	
+	<record model="ir.ui.view" id="view_ims_def_attribut_form">
+                <field name="name">ims.def.attribut.form</field>
+                <field name="model">ims.def.attribut</field>
+                <field name="type">form</field>
+                <field name="arch" type="xml">
+                        <form string="Attributs">
+                                <field name="name" colspan="4" select="1"/>
+                                <newline/>
+                                <field name="designation" />
+                                <field name="typeattribut" select="1"/>
+                                <field name="imsoid" select="1"/>
+                                <field name="taille"/>
+                                <field name="defaut" select="1"/>
+
+                        </form>
+                </field>
+        </record>
+        <record model="ir.ui.view" id="view_ims_def_attribut_tree">
+                <field name="name">ims.def.attribut.tree</field>
+                <field name="model">ims.def.attribut</field>
+                <field name="type">tree</field>
+                <field name="arch" type="xml">
+                        <tree string="Attribut">
+				<field name="name" colspan="4" select="1"/>
+                                <field name="designation" />
+                                <field name="typeattribut" select="1"/>
+                                <field name="imsoid" select="1"/>
+                                <field name="taille"/>
+                                <field name="defaut" select="1"/>
+                        </tree>
+                </field>
+        </record>
+<record model="ir.actions.act_window" id="action_ims_def_attribut_form">
+                <field name="name">ims.def.attribut.form</field>
+                <field name="type">ir.actions.act_window</field>
+                <field name="res_model">ims.def.attribut</field>
+                <field name="view_type">form</field>
+        </record>
+
+	<menuitem name="IMS/Configuration/Attributs" groups="admin" action="action_ims_def_attribut_form" id="menu_ims_def_attribut_form"/>
+        <record model="ir.actions.act_window" id="ims_case_categ0-act">
+                    <field name="res_model">crm.case</field>
+                    <field name="view_type">form</field>
+        </record>
+      <menuitem name="IMS/Technique/Hot Line" id="menu_crm_ims_categ0-act" action="ims_case_categ0-act"/>
+	
+	<record model="ir.ui.view" id="view_ims_urlaccess_tree">
+		<field name="name">ims.urlaccess.tree</field>
+		<field name="model">ims.urlaccess</field>
+		<field name="type">tree</field>
+		<field name="arch" type="xml">
+			<tree string="Url" editable="bottom">
+				<field name="name"/>
+				<field name="date"/>
+				<field name="username"/>
+				<field name="categorie"/>
+				<field name="nom"/>
+				<field name="prenom"/>
+				<field name="service"/>
+				<field name="fonction"/>
+				<field name="motif"/>
+				<field name="autorisation"/>
+			</tree>
+		</field>
+	</record>
+	<record model="ir.ui.view" id="view_ims_urlaccess_form">
+		<field name="name">ims.urlaccess.form</field>
+		<field name="model">ims.urlaccess</field>
+		<field name="type">form</field>
+		<field name="arch" type="xml">
+			<form string="URL Access">
+				<field name="name"/>
+				<field name="date"/>
+				<field name="username"/>
+				<field name="categorie"/>
+				<field name="nom"/>
+				<field name="prenom"/>
+				<field name="service"/>
+				<field name="fonction"/>
+				<field name="autorisation"/>
+				<newline />
+				<field name="motif" colspan="4"/>
+				
+			</form>
+		</field>
+	</record>
+	<record model="ir.actions.act_window" id="action_ims_urlaccess_tree">
+                <field name="name">Access URL</field>
+                <field name="type">ir.actions.act_window</field>
+                <field name="res_model">ims.urlaccess</field>
+                <field name="view_type">form</field>
+        </record>
+	<menuitem name="IMS/Technique/URL Access" action="action_ims_urlaccess_tree" id="menu_ims_urlaccess_tree"/>
+	
+	<!--  
+		Product
+	-->
+	<record model="ir.ui.view" id="view_crm_ims2">
+  		<field name="name">crm.case.form.inherit3</field> 
+    		<field name="model">crm.case</field> 
+      		<field name="type">form</field> 
+        	<field name="inherit_id" ref="crm.crm_case-view" /> 
+	 	<field name="arch" type="xml">
+				<field name="history_line"  position="replace" colspan="4" nolabel="1" mode="tree,form">
+						-<form string="Communication history">
+							<group col="6" colspan="4">
+								<field name="date" select="1"/>
+								<field name="duree" select="1"/>
+								<field name="email" select="1"/>
+								<field name="canal_id" select="2"/>
+							</group>
+							<newline/>
+							<field name="description" colspan="4" nolabel="1" select="2"/>
+						</form>
+						<tree string="Communication history">
+							<field name="email"/>
+							<field name="duree" select="1"/>
+							<field name="date"/>
+							<field name="description"/>
+						</tree>
+				</field>
+		</field>
+    	</record>
+</data>
+</terp>

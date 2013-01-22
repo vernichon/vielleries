@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<terp>
+	<data noupdate="1">
+    <delete model="ir.actions.report.xml" search="[('report_name','=','sale.order')]"/>
+	
+   
+           <report id="account_invoices"
+             string="Factures"
+             model="account.invoice"
+             name="account.invoice.amc"
+             rml="amc/report/invoice.rml"
+             auto="False"/>
+	<report
+		id="report_sale_order"
+		string="Impression Commande"
+		model="sale.order"
+		name="sale.order.amc"
+		rml="amc/report/order.rml"
+		auto="False"/>
+	</data>
+</terp>

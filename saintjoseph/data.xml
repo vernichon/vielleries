@@ -1,0 +1,1878 @@
+<?xml version="1.0"  encoding="utf-8"?>
+<terp>
+	<data >
+
+
+		<record id="product_category0" model="product.category">
+			<field eval="&quot;Allocation&quot;" name="name"/>
+		</record>
+		<record id="product_category1" model="product.category">
+			<field eval="&quot;Hébergement&quot;" name="name"/>
+		</record>
+		<record id="product_category2" model="product.category">
+			<field eval="&quot;Matériel&quot;" name="name"/>
+		</record>
+                <record id="tarif_chambre0" model="health.room.tarif">
+                    <field name="name">Chambre Simple + 60 ans</field>
+                    <field name="ref">csp60</field>
+                    <field name="prix">40.85</field>
+                    <field name="age">2</field>
+                    <field name="type">1</field>
+                </record>
+                <record id="tarif_chambre1" model="health.room.tarif">
+                    <field name="name">Chambre Simple - 60 ans</field>
+                    <field name="ref">csm60</field>
+                    <field name="prix">56.35</field>
+                    <field name="age">1</field>
+                    <field name="type">1</field>
+                </record>
+                <record id="tarif_chambre2" model="health.room.tarif">
+                    <field name="name">Chambre Double + 60 ans</field>
+                    <field name="ref">cdp60</field>
+                    <field name="prix">36.15</field>
+                    <field name="age">2</field>
+                    <field name="type">2</field>
+                </record>
+                <record id="tarif_chambre3" model="health.room.tarif">
+                    <field name="name">Chambre Double - 60 ans</field>
+                    <field name="ref">cdm60</field>
+                    <field name="prix">50.06</field>
+                    <field name="age">1</field>
+                    <field name="type">2</field>
+                </record>
+
+                <record id="tarif_chambre4" model="health.room.tarif">
+                    <field name="name">Chambre Congregation </field>
+                    <field name="ref">ccong</field>
+                    <field name="prix">34.28</field>
+                    <field name="age">2</field>
+                    <field name="type">2</field>
+                </record>
+
+              <record id="tarif.dependance0" model="health.tarif.dependance">
+                    <field name="name">1</field>
+                    <field name="montant">13.97</field>
+                </record>
+                <record id="tarif.dependance1" model="health.tarif.dependance">
+                    <field name="name">2</field>
+                    <field name="montant">13.97</field>
+                </record>
+              <record id="tarif.dependance2" model="health.tarif.dependance">
+                    <field name="name">3</field>
+                    <field name="montant">6.98</field>
+                </record>                
+                <record id="tarif.dependance3" model="health.tarif.dependance">
+                    <field name="name">4</field>
+                    <field name="montant">6.98</field>
+                </record>                
+               <record id="tarif.dependance4" model="health.tarif.dependance">
+                    <field name="name">5</field>
+                    <field name="montant">0.0</field>
+                </record>                                
+               <record id="tarif.dependance5" model="health.tarif.dependance">
+                    <field name="name">6</field>
+                    <field name="montant">0.0</field>
+                </record>                                
+		<record id="product_product_0" model="product.product">
+			<field eval="&quot;apa&quot;" name="default_code"/>
+			<field eval="&quot;Allocation APA&quot;" name="name"/>
+			<field eval="&quot;1&quot;" name="active"/>
+			<field  name="categ_id" ref="product_category0"/>
+			<field eval="1.0" name="price_margin"/>
+		</record>
+		<record id="product_product_1" model="product.product">
+			<field eval="&quot;as&quot;" name="default_code"/>
+			<field eval="&quot;Allocation AIDE SOCIALE&quot;" name="name"/>
+			<field eval="&quot;1&quot;" name="active"/>
+			<field  name="categ_id" ref="product_category0"/>
+			<field eval="1.0" name="price_margin"/>
+		</record>
+		<record id="product_product_2" model="product.product">
+			<field eval="&quot;al&quot;" name="default_code"/>
+			<field eval="&quot;Allocation AIDE LOGEMENT&quot;" name="name"/>
+			<field eval="&quot;1&quot;" name="active"/>
+			<field  name="categ_id" ref="product_category0"/>
+	  		<field eval="1.0" name="price_margin"/>
+        </record>
+		<record id="product_product_3" model="product.product">
+			<field eval="&quot;dep&quot;" name="default_code"/>
+			<field eval="&quot;Dépendance&quot;" name="name"/>
+			<field eval="&quot;1&quot;" name="active"/>
+			<field  name="categ_id" ref="product_category1"/>
+			<field eval="1.0" name="price_margin"/>
+		</record>
+		<record id="product_product_4" model="product.product">
+			<field eval="&quot;heb&quot;" name="default_code"/>
+			<field eval="&quot;Hébergement&quot;" name="name"/>
+			<field eval="&quot;1&quot;" name="active"/>
+			<field  name="categ_id" ref="product_category1"/>
+			<field eval="1.0" name="price_margin"/>
+		</record>
+		<record id="product_product_5" model="product.product">
+			<field eval="&quot;ab&quot;" name="default_code"/>
+			<field eval="&quot;Absences&quot;" name="name"/>
+			<field eval="&quot;1&quot;" name="active"/>
+			<field  name="categ_id" ref="product_category1"/>
+			<field eval="1.0" name="price_margin"/>
+		</record>
+		<record id="product_product_6" model="product.product">
+			<field eval="&quot;tm&quot;" name="default_code"/>
+			<field eval="&quot;Ticket Modérateur&quot;" name="name"/>
+			<field eval="&quot;1&quot;" name="active"/>
+			<field  name="categ_id" ref="product_category1"/>
+			<field eval="1.0" name="price_margin"/>
+			<field eval="5.15" name="list_price"/>
+		</record>
+		<record id="product_product_7" model="product.product">
+			<field eval="&quot;abp&quot;" name="default_code"/>
+			<field eval="&quot;Absences pour convenance personelle&quot;" name="name"/>
+			<field eval="&quot;1&quot;" name="active"/>
+			<field  name="categ_id" ref="product_category1"/>
+			<field eval="1.0" name="price_margin"/>
+		</record>
+		<record id="product_product_8" model="product.product">
+			<field eval="&quot;abh&quot;" name="default_code"/>
+			<field eval="&quot;Absences pour hospitalisation&quot;" name="name"/>
+			<field eval="&quot;1&quot;" name="active"/>
+			<field  name="categ_id" ref="product_category1"/>
+			<field eval="1.0" name="price_margin"/>
+		</record>
+                <record id="localisation_BAT1" model="health.room.localisation">
+                    <field name="name">BAT1</field>
+                    <field name="designation">Chambre simple MAPAD</field>
+                    <field name="nbrchambre">50</field>
+                </record>
+                <record id="localisation_BAT2" model="health.room.localisation">
+                    <field name="name">BAT2</field>
+                    <field name="designation">Chambre double MAPAD</field>
+                    <field name="nbrchambre">26</field>
+                </record>
+                <record id="localisation_REPOS" model="health.room.localisation">
+                    <field name="name">REPOS</field>
+                    <field name="designation">Reposance</field>
+                    <field name="nbrchambre">1</field>
+                </record>
+                <record id="localisation_RES" model="health.room.localisation">
+                    <field name="name">RES</field>
+                    <field name="designation">Chambre individuelle Résidence St Joseph</field>
+                    <field name="nbrchambre">18</field>
+                </record>
+                <record id="localisation_RES2" model="health.room.localisation">
+                    <field name="name">RES2</field>
+                    <field name="designation">Résidence 2 lits</field>
+                    <field name="nbrchambre">2</field>
+                </record>
+                <record id="localisation_SA" model="health.room.localisation">
+                    <field name="name">SA</field>
+                    <field name="designation">Soeurs ainées</field>
+                    <field name="nbrchambre">11</field>
+                </record>
+                <record id="localisation_TEMPO1" model="health.room.localisation">
+                    <field name="name">TEMPO 1</field>
+                    <field name="designation">Hébergement temporaire CH seule</field>
+                    <field name="nbrchambre">1</field>
+                </record>
+                <record id="localisation_TEMPO2" model="health.room.localisation">
+                    <field name="name">TEMPO 2</field>
+                    <field name="designation">Hébergement temporaire Ch Double</field>
+                    <field name="nbrchambre">1</field>
+                </record>
+                <record id="localisation_TEMPORS2" model="health.room.localisation">
+                    <field name="name">TEMPO RS2</field>
+                    <field name="designation">Hébergement tempo Résidence ch 2 lits</field>
+                    <field name="nbrchambre">2</field>
+                </record>
+                		<record id="chambre_1" model="health.room">
+			<field name="name">2</field>
+			<field name="localisation" ref="localisation_BAT1" />
+			<field name="type">1</field>
+			<field name="bed">1</field>
+		</record>
+		<record id="chambre_2" model="health.room">
+			<field name="name">3</field>
+			<field name="localisation" ref="localisation_BAT1" />
+			<field name="type">1</field>
+			<field name="bed">1</field>
+		</record>
+		<record id="chambre_3" model="health.room">
+			<field name="name">4</field>
+			<field name="localisation" ref="localisation_BAT2" />
+			<field name="type">2</field>
+			<field name="bed">2</field>
+		</record>
+		<record id="chambre_4" model="health.room">
+			<field name="name">6</field>
+			<field name="localisation" ref="localisation_BAT1" />
+			<field name="type">1</field>
+			<field name="bed">1</field>
+		</record>
+		<record id="chambre_5" model="health.room">
+			<field name="name">7</field>
+			<field name="localisation" ref="localisation_BAT2" />
+			<field name="type">2</field>
+			<field name="bed">2</field>
+		</record>
+		<record id="chambre_6" model="health.room">
+			<field name="name">8</field>
+			<field name="localisation" ref="localisation_BAT1" />
+			<field name="type">1</field>
+			<field name="bed">1</field>
+		</record>
+		<record id="chambre_7" model="health.room">
+			<field name="name">52</field>
+			<field name="localisation" ref="localisation_BAT1" />
+			<field name="type">1</field>
+			<field name="bed">1</field>
+		</record>
+		<record id="chambre_8" model="health.room">
+			<field name="name">60</field>
+			<field name="localisation" ref="localisation_BAT1" />
+			<field name="type">1</field>
+			<field name="bed">1</field>
+		</record>
+		<record id="chambre_9" model="health.room">
+			<field name="name">62</field>
+			<field name="localisation" ref="localisation_BAT2" />
+			<field name="type">2</field>
+			<field name="bed">2</field>
+		</record>
+		<record id="chambre_10" model="health.room">
+			<field name="name">62</field>
+			<field name="localisation" ref="localisation_BAT1" />
+			<field name="type">1</field>
+			<field name="bed">1</field>
+		</record>
+		<record id="chambre_11" model="health.room">
+			<field name="name">64</field>
+			<field name="localisation" ref="localisation_BAT1" />
+			<field name="type">1</field>
+			<field name="bed">1</field>
+		</record>
+		<record id="chambre_12" model="health.room">
+			<field name="name">91</field>
+			<field name="localisation" ref="localisation_SA" />
+			<field name="type">1</field>
+			<field name="bed">1</field>
+		</record>
+		<record id="chambre_13" model="health.room">
+			<field name="name">92</field>
+			<field name="localisation" ref="localisation_BAT1" />
+			<field name="type">1</field>
+			<field name="bed">1</field>
+		</record>
+		<record id="chambre_14" model="health.room">
+			<field name="name">93</field>
+			<field name="localisation" ref="localisation_SA" />
+			<field name="type">1</field>
+			<field name="bed">1</field>
+		</record>
+		<record id="chambre_15" model="health.room">
+			<field name="name">94</field>
+			<field name="localisation" ref="localisation_BAT1" />
+			<field name="type">1</field>
+			<field name="bed">1</field>
+		</record>
+		<record id="chambre_16" model="health.room">
+			<field name="name">103</field>
+			<field name="localisation" ref="localisation_BAT1" />
+			<field name="type">1</field>
+			<field name="bed">1</field>
+		</record>
+		<record id="chambre_17" model="health.room">
+			<field name="name">104</field>
+			<field name="localisation" ref="localisation_BAT2" />
+			<field name="type">2</field>
+			<field name="bed">2</field>
+		</record>
+		<record id="chambre_17-1" model="health.room">
+			<field name="name">107</field>
+			<field name="localisation" ref="localisation_BAT2" />
+			<field name="type">2</field>
+			<field name="bed">2</field>
+		</record>
+
+<record id="chambre_18" model="health.room">
+			<field name="name">110</field>
+			<field name="localisation" ref="localisation_BAT2" />
+			<field name="type">2</field>
+			<field name="bed">2</field>
+		</record>
+		<record id="chambre_19" model="health.room">
+			<field name="name">111</field>
+			<field name="localisation" ref="localisation_BAT1" />
+			<field name="type">1</field>
+			<field name="bed">1</field>
+		</record>
+		<record id="chambre_20_2" model="health.room">
+			<field name="name">112</field>
+			<field name="localisation" ref="localisation_BAT2" />
+			<field name="type">2</field>
+			<field name="bed">2</field>
+		</record>
+		<record id="chambre_20_1" model="health.room">
+			<field name="name">114</field>
+			<field name="localisation" ref="localisation_BAT2" />
+			<field name="type">2</field>
+			<field name="bed">2</field>
+		</record>
+		<record id="chambre_20" model="health.room">
+			<field name="name">113</field>
+			<field name="localisation" ref="localisation_BAT2" />
+			<field name="type">2</field>
+			<field name="bed">2</field>
+		</record>
+		<record id="chambre_21" model="health.room">
+			<field name="name">115</field>
+			<field name="localisation" ref="localisation_BAT1" />
+			<field name="type">1</field>
+			<field name="bed">1</field>
+		</record>
+		<record id="chambre_22" model="health.room">
+			<field name="name">116</field>
+			<field name="localisation" ref="localisation_BAT1" />
+			<field name="type">1</field>
+			<field name="bed">1</field>
+		</record>
+		<record id="chambre_23" model="health.room">
+			<field name="name">117</field>
+			<field name="localisation" ref="localisation_BAT1" />
+			<field name="type">1</field>
+			<field name="bed">1</field>
+		</record>
+		<record id="chambre_24" model="health.room">
+			<field name="name">132</field>
+			<field name="localisation" ref="localisation_BAT1" />
+			<field name="type">1</field>
+			<field name="bed">1</field>
+		</record>
+		<record id="chambre_25" model="health.room">
+			<field name="name">133</field>
+			<field name="localisation" ref="localisation_BAT1" />
+			<field name="type">1</field>
+			<field name="bed">1</field>
+		</record>
+		<record id="chambre_26" model="health.room">
+			<field name="name">134</field>
+			<field name="localisation" ref="localisation_BAT1" />
+			<field name="type">1</field>
+			<field name="bed">1</field>
+		</record>
+		<record id="chambre_27" model="health.room">
+			<field name="name">135</field>
+			<field name="localisation" ref="localisation_BAT1" />
+			<field name="type">1</field>
+			<field name="bed">1</field>
+		</record>
+		<record id="chambre_28" model="health.room">
+			<field name="name">136</field>
+			<field name="localisation" ref="localisation_BAT1" />
+			<field name="type">1</field>
+			<field name="bed">1</field>
+		</record>
+		<record id="chambre_29" model="health.room">
+			<field name="name">137</field>
+			<field name="localisation" ref="localisation_BAT2" />
+			<field name="type">2</field>
+			<field name="bed">2</field>
+		</record>
+		<record id="chambre_30" model="health.room">
+			<field name="name">138</field>
+			<field name="localisation" ref="localisation_BAT1" />
+			<field name="type">1</field>
+			<field name="bed">1</field>
+		</record>
+		<record id="chambre_31" model="health.room">
+			<field name="name">139</field>
+			<field name="localisation" ref="localisation_BAT2" />
+			<field name="type">2</field>
+			<field name="bed">2</field>
+		</record>
+		<record id="chambre_32" model="health.room">
+			<field name="name">140</field>
+			<field name="localisation" ref="localisation_BAT1" />
+			<field name="type">1</field>
+			<field name="bed">1</field>
+		</record>
+		<record id="chambre_33" model="health.room">
+			<field name="name">141</field>
+			<field name="localisation" ref="localisation_BAT1" />
+			<field name="type">1</field>
+			<field name="bed">1</field>
+		</record>
+		<record id="chambre_34" model="health.room">
+			<field name="name">142</field>
+			<field name="localisation" ref="localisation_BAT1" />
+			<field name="type">1</field>
+			<field name="bed">1</field>
+		</record>
+		<record id="chambre_35" model="health.room">
+			<field name="name">143</field>
+			<field name="localisation" ref="localisation_BAT2" />
+			<field name="type">2</field>
+			<field name="bed">2</field>
+		</record>
+		<record id="chambre_36" model="health.room">
+			<field name="name">144</field>
+			<field name="localisation" ref="localisation_BAT1" />
+			<field name="type">1</field>
+			<field name="bed">1</field>
+		</record>
+		<record id="chambre_37" model="health.room">
+			<field name="name">145</field>
+			<field name="localisation" ref="localisation_BAT2" />
+			<field name="type">2</field>
+			<field name="bed">2</field>
+		</record>
+		<record id="chambre_38" model="health.room">
+			<field name="name">151</field>
+			<field name="localisation" ref="localisation_BAT2" />
+			<field name="type">2</field>
+			<field name="bed">2</field>
+		</record>
+		<record id="chambre_39" model="health.room">
+			<field name="name">153</field>
+			<field name="localisation" ref="localisation_BAT1" />
+			<field name="type">1</field>
+			<field name="bed">1</field>
+		</record>
+		<record id="chambre_40" model="health.room">
+			<field name="name">162</field>
+			<field name="localisation" ref="localisation_BAT1" />
+			<field name="type">1</field>
+			<field name="bed">1</field>
+		</record>
+		<record id="chambre_41" model="health.room">
+			<field name="name">171</field>
+			<field name="localisation" ref="localisation_BAT1" />
+			<field name="type">1</field>
+			<field name="bed">1</field>
+		</record>
+		<record id="chambre_42" model="health.room">
+			<field name="name">181</field>
+			<field name="localisation" ref="localisation_BAT1" />
+			<field name="type">1</field>
+			<field name="bed">1</field>
+		</record>
+		<record id="chambre_43" model="health.room">
+			<field name="name">181</field>
+			<field name="localisation" ref="localisation_SA" />
+			<field name="type">1</field>
+			<field name="bed">1</field>
+		</record>
+		<record id="chambre_44" model="health.room">
+			<field name="name">182</field>
+			<field name="localisation" ref="localisation_BAT1" />
+			<field name="type">1</field>
+			<field name="bed">1</field>
+		</record>
+		<record id="chambre_45" model="health.room">
+			<field name="name">183</field>
+			<field name="localisation" ref="localisation_SA" />
+			<field name="type">1</field>
+			<field name="bed">1</field>
+		</record>
+		<record id="chambre_46" model="health.room">
+			<field name="name">183</field>
+			<field name="localisation" ref="localisation_BAT1" />
+			<field name="type">1</field>
+			<field name="bed">1</field>
+		</record>
+		<record id="chambre_47" model="health.room">
+			<field name="name">184</field>
+			<field name="localisation" ref="localisation_BAT1" />
+			<field name="type">1</field>
+			<field name="bed">1</field>
+		</record>
+		<record id="chambre_48" model="health.room">
+			<field name="name">184</field>
+			<field name="localisation" ref="localisation_SA" />
+			<field name="type">1</field>
+			<field name="bed">1</field>
+		</record>
+		<record id="chambre_49" model="health.room">
+			<field name="name">184</field>
+			<field name="localisation" ref="localisation_BAT2" />
+			<field name="type">2</field>
+			<field name="bed">2</field>
+		</record>
+		<record id="chambre_50" model="health.room">
+			<field name="name">191</field>
+			<field name="localisation" ref="localisation_SA" />
+			<field name="type">1</field>
+			<field name="bed">1</field>
+		</record>
+		<record id="chambre_51" model="health.room">
+			<field name="name">192</field>
+			<field name="localisation" ref="localisation_SA" />
+			<field name="type">1</field>
+			<field name="bed">1</field>
+		</record>
+		<record id="chambre_52" model="health.room">
+			<field name="name">193</field>
+			<field name="localisation" ref="localisation_SA" />
+			<field name="type">1</field>
+			<field name="bed">1</field>
+		</record>
+		<record id="chambre_53" model="health.room">
+			<field name="name">194</field>
+			<field name="localisation" ref="localisation_SA" />
+			<field name="type">1</field>
+			<field name="bed">1</field>
+		</record>
+		<record id="chambre_54" model="health.room">
+			<field name="name">203</field>
+			<field name="localisation" ref="localisation_BAT1" />
+			<field name="type">1</field>
+			<field name="bed">1</field>
+		</record>
+		<record id="chambre_55" model="health.room">
+			<field name="name">205</field>
+			<field name="localisation" ref="localisation_BAT1" />
+			<field name="type">1</field>
+			<field name="bed">1</field>
+		</record>
+		<record id="chambre_56" model="health.room">
+			<field name="name">206</field>
+			<field name="localisation" ref="localisation_BAT1" />
+			<field name="type">1</field>
+			<field name="bed">1</field>
+		</record>
+		<record id="chambre_57" model="health.room">
+			<field name="name">207</field>
+			<field name="localisation" ref="localisation_BAT1" />
+			<field name="type">1</field>
+			<field name="bed">1</field>
+		</record>
+		<record id="chambre_58" model="health.room">
+			<field name="name">211</field>
+			<field name="localisation" ref="localisation_BAT1" />
+			<field name="type">1</field>
+			<field name="bed">1</field>
+		</record>
+		<record id="chambre_59" model="health.room">
+			<field name="name">215</field>
+			<field name="localisation" ref="localisation_BAT1" />
+			<field name="type">1</field>
+			<field name="bed">1</field>
+		</record>
+		<record id="chambre_60" model="health.room">
+			<field name="name">215</field>
+			<field name="localisation" ref="localisation_RES" />
+			<field name="type">1</field>
+			<field name="bed">1</field>
+		</record>
+		<record id="chambre_61" model="health.room">
+			<field name="name">217</field>
+			<field name="localisation" ref="localisation_TEMPO1" />
+			<field name="type">1</field>
+			<field name="bed">1</field>
+		</record>
+		<record id="chambre_62" model="health.room">
+			<field name="name">217</field>
+			<field name="localisation" ref="localisation_BAT1" />
+			<field name="type">1</field>
+			<field name="bed">1</field>
+		</record>
+		<record id="chambre_63" model="health.room">
+			<field name="name">218</field>
+			<field name="localisation" ref="localisation_BAT1" />
+			<field name="type">1</field>
+			<field name="bed">1</field>
+		</record>
+		<record id="chambre_64" model="health.room">
+			<field name="name">219</field>
+			<field name="localisation" ref="localisation_BAT1" />
+			<field name="type">1</field>
+			<field name="bed">1</field>
+		</record>
+		<record id="chambre_65" model="health.room">
+			<field name="name">231</field>
+			<field name="localisation" ref="localisation_BAT2" />
+			<field name="type">2</field>
+			<field name="bed">2</field>
+		</record>
+		<record id="chambre_66" model="health.room">
+			<field name="name">232</field>
+			<field name="localisation" ref="localisation_BAT1" />
+			<field name="type">1</field>
+			<field name="bed">1</field>
+		</record>
+		<record id="chambre_67" model="health.room">
+			<field name="name">233</field>
+			<field name="localisation" ref="localisation_BAT1" />
+			<field name="type">1</field>
+			<field name="bed">1</field>
+		</record>
+		<record id="chambre_68" model="health.room">
+			<field name="name">234</field>
+			<field name="localisation" ref="localisation_BAT1" />
+			<field name="type">1</field>
+			<field name="bed">1</field>
+		</record>
+		<record id="chambre_69" model="health.room">
+			<field name="name">235</field>
+			<field name="localisation" ref="localisation_BAT1" />
+			<field name="type">1</field>
+			<field name="bed">1</field>
+		</record>
+		<record id="chambre_70" model="health.room">
+			<field name="name">235</field>
+			<field name="localisation" ref="localisation_BAT1" />
+			<field name="type">1</field>
+			<field name="bed">1</field>
+		</record>
+		<record id="chambre_71" model="health.room">
+			<field name="name">236</field>
+			<field name="localisation" ref="localisation_BAT1" />
+			<field name="type">1</field>
+			<field name="bed">1</field>
+		</record>
+		<record id="chambre_72" model="health.room">
+			<field name="name">238</field>
+			<field name="localisation" ref="localisation_BAT1" />
+			<field name="type">1</field>
+			<field name="bed">1</field>
+		</record>
+		<record id="chambre_73" model="health.room">
+			<field name="name">239</field>
+			<field name="localisation" ref="localisation_BAT2" />
+			<field name="type">2</field>
+			<field name="bed">2</field>
+		</record>
+		<record id="chambre_74" model="health.room">
+			<field name="name">239</field>
+			<field name="localisation" ref="localisation_BAT2" />
+			<field name="type">2</field>
+			<field name="bed">2</field>
+		</record>
+		<record id="chambre_75" model="health.room">
+			<field name="name">239</field>
+			<field name="localisation" ref="localisation_BAT1" />
+			<field name="type">1</field>
+			<field name="bed">1</field>
+		</record>
+		<record id="chambre_76" model="health.room">
+			<field name="name">240</field>
+			<field name="localisation" ref="localisation_BAT1" />
+			<field name="type">1</field>
+			<field name="bed">1</field>
+		</record>
+		<record id="chambre_77" model="health.room">
+			<field name="name">241</field>
+			<field name="localisation" ref="localisation_BAT1" />
+			<field name="type">1</field>
+			<field name="bed">1</field>
+		</record>
+		<record id="chambre_78" model="health.room">
+			<field name="name">242</field>
+			<field name="localisation" ref="localisation_BAT1" />
+			<field name="type">1</field>
+			<field name="bed">1</field>
+		</record>
+		<record id="chambre_79" model="health.room">
+			<field name="name">244</field>
+			<field name="localisation" ref="localisation_BAT1" />
+			<field name="type">1</field>
+			<field name="bed">1</field>
+		</record>
+		<record id="chambre_80" model="health.room">
+			<field name="name">251</field>
+			<field name="localisation" ref="localisation_BAT2" />
+			<field name="type">2</field>
+			<field name="bed">2</field>
+		</record>
+		<record id="chambre_81" model="health.room">
+			<field name="name">252</field>
+			<field name="localisation" ref="localisation_BAT1" />
+			<field name="type">1</field>
+			<field name="bed">1</field>
+		</record>
+		<record id="chambre_82" model="health.room">
+			<field name="name">253</field>
+			<field name="localisation" ref="localisation_BAT2" />
+			<field name="type">2</field>
+			<field name="bed">2</field>
+		</record>
+		<record id="chambre_83" model="health.room">
+			<field name="name">262</field>
+			<field name="localisation" ref="localisation_BAT1" />
+			<field name="type">1</field>
+			<field name="bed">1</field>
+		</record>
+		<record id="chambre_84" model="health.room">
+			<field name="name">263</field>
+			<field name="localisation" ref="localisation_BAT2" />
+			<field name="type">2</field>
+			<field name="bed">2</field>
+		</record>
+		<record id="chambre_85" model="health.room">
+			<field name="name">264</field>
+			<field name="localisation" ref="localisation_BAT1" />
+			<field name="type">1</field>
+			<field name="bed">1</field>
+		</record>
+		<record id="chambre_86" model="health.room">
+			<field name="name">264</field>
+			<field name="localisation" ref="localisation_BAT1" />
+			<field name="type">1</field>
+			<field name="bed">1</field>
+		</record>
+		<record id="chambre_87" model="health.room">
+			<field name="name">271</field>
+			<field name="localisation" ref="localisation_BAT1" />
+			<field name="type">1</field>
+			<field name="bed">1</field>
+		</record>
+		<record id="chambre_88" model="health.room">
+			<field name="name">272</field>
+			<field name="localisation" ref="localisation_BAT2" />
+			<field name="type">2</field>
+			<field name="bed">2</field>
+		</record>
+		<record id="chambre_89" model="health.room">
+			<field name="name">273</field>
+			<field name="localisation" ref="localisation_BAT2" />
+			<field name="type">2</field>
+			<field name="bed">2</field>
+		</record>
+		<record id="chambre_90" model="health.room">
+			<field name="name">281</field>
+			<field name="localisation" ref="localisation_BAT1" />
+			<field name="type">1</field>
+			<field name="bed">1</field>
+		</record>
+		<record id="chambre_91" model="health.room">
+			<field name="name">282</field>
+			<field name="localisation" ref="localisation_BAT1" />
+			<field name="type">1</field>
+			<field name="bed">1</field>
+		</record>
+		<record id="chambre_92" model="health.room">
+			<field name="name">283</field>
+			<field name="localisation" ref="localisation_BAT1" />
+			<field name="type">1</field>
+			<field name="bed">1</field>
+		</record>
+		<record id="chambre_93" model="health.room">
+			<field name="name">303</field>
+			<field name="localisation" ref="localisation_BAT1" />
+			<field name="type">1</field>
+			<field name="bed">1</field>
+		</record>
+		<record id="chambre_94" model="health.room">
+			<field name="name">304</field>
+			<field name="localisation" ref="localisation_BAT2" />
+			<field name="type">2</field>
+			<field name="bed">2</field>
+		</record>
+		<record id="chambre_95" model="health.room">
+			<field name="name">304</field>
+			<field name="localisation" ref="localisation_BAT1" />
+			<field name="type">1</field>
+			<field name="bed">1</field>
+		</record>
+		<record id="chambre_96" model="health.room">
+			<field name="name">305</field>
+			<field name="localisation" ref="localisation_BAT2" />
+			<field name="type">2</field>
+			<field name="bed">2</field>
+		</record>
+		<record id="chambre_97" model="health.room">
+			<field name="name">307</field>
+			<field name="localisation" ref="localisation_BAT1" />
+			<field name="type">1</field>
+			<field name="bed">1</field>
+		</record>
+		<record id="chambre_98" model="health.room">
+			<field name="name">309</field>
+			<field name="localisation" ref="localisation_BAT1" />
+			<field name="type">1</field>
+			<field name="bed">1</field>
+		</record>
+		<record id="chambre_99" model="health.room">
+			<field name="name">310</field>
+			<field name="localisation" ref="localisation_BAT1" />
+			<field name="type">1</field>
+			<field name="bed">1</field>
+		</record>
+		<record id="chambre_100" model="health.room">
+			<field name="name">312</field>
+			<field name="localisation" ref="localisation_BAT1" />
+			<field name="type">1</field>
+			<field name="bed">1</field>
+		</record>
+		<record id="chambre_101" model="health.room">
+			<field name="name">313</field>
+			<field name="localisation" ref="localisation_BAT1" />
+			<field name="type">1</field>
+			<field name="bed">1</field>
+		</record>
+		<record id="chambre_102" model="health.room">
+			<field name="name">314</field>
+			<field name="localisation" ref="localisation_BAT1" />
+			<field name="type">1</field>
+			<field name="bed">1</field>
+		</record>
+		<record id="chambre_103" model="health.room">
+			<field name="name">315</field>
+			<field name="localisation" ref="localisation_BAT1" />
+			<field name="type">1</field>
+			<field name="bed">1</field>
+		</record>
+		<record id="chambre_104" model="health.room">
+			<field name="name">318</field>
+			<field name="localisation" ref="localisation_BAT1" />
+			<field name="type">1</field>
+			<field name="bed">1</field>
+		</record>
+		<record id="chambre_105" model="health.room">
+			<field name="name">342</field>
+			<field name="localisation" ref="localisation_BAT1" />
+			<field name="type">1</field>
+			<field name="bed">1</field>
+		</record>
+		<record id="chambre_106" model="health.room">
+			<field name="name">343</field>
+			<field name="localisation" ref="localisation_BAT2" />
+			<field name="type">2</field>
+			<field name="bed">2</field>
+		</record>
+		<record id="chambre_107" model="health.room">
+			<field name="name">351</field>
+			<field name="localisation" ref="localisation_BAT1" />
+			<field name="type">1</field>
+			<field name="bed">1</field>
+		</record>
+		<record id="chambre_108" model="health.room">
+			<field name="name">352</field>
+			<field name="localisation" ref="localisation_BAT1" />
+			<field name="type">1</field>
+			<field name="bed">1</field>
+		</record>
+		<record id="chambre_109" model="health.room">
+			<field name="name">353</field>
+			<field name="localisation" ref="localisation_BAT1" />
+			<field name="type">1</field>
+			<field name="bed">1</field>
+		</record>
+		<record id="chambre_110" model="health.room">
+			<field name="name">360</field>
+			<field name="localisation" ref="localisation_BAT1" />
+			<field name="type">1</field>
+			<field name="bed">1</field>
+		</record>
+		<record id="chambre_111" model="health.room">
+			<field name="name">362</field>
+			<field name="localisation" ref="localisation_SA" />
+			<field name="type">1</field>
+			<field name="bed">1</field>
+		</record>
+		<record id="chambre_112" model="health.room">
+			<field name="name">363</field>
+			<field name="localisation" ref="localisation_BAT1" />
+			<field name="type">1</field>
+			<field name="bed">1</field>
+		</record>
+		<record id="chambre_113" model="health.room">
+			<field name="name">364</field>
+			<field name="localisation" ref="localisation_BAT1" />
+			<field name="type">1</field>
+			<field name="bed">1</field>
+		</record>
+		<record id="chambre_114" model="health.room">
+			<field name="name">365</field>
+			<field name="localisation" ref="localisation_BAT1" />
+			<field name="type">1</field>
+			<field name="bed">1</field>
+		</record>
+		<record id="chambre_115" model="health.room">
+			<field name="name">371</field>
+			<field name="localisation" ref="localisation_BAT1" />
+			<field name="type">1</field>
+			<field name="bed">1</field>
+		</record>
+		<record id="chambre_116" model="health.room">
+			<field name="name">372</field>
+			<field name="localisation" ref="localisation_BAT1" />
+			<field name="type">1</field>
+			<field name="bed">1</field>
+		</record>
+		<record id="chambre_117" model="health.room">
+			<field name="name">401</field>
+			<field name="localisation" ref="localisation_SA" />
+			<field name="type">1</field>
+			<field name="bed">1</field>
+		</record>
+		<record id="chambre_118" model="health.room">
+			<field name="name">411</field>
+			<field name="localisation" ref="localisation_BAT1" />
+			<field name="type">1</field>
+			<field name="bed">1</field>
+		</record>
+		<record id="chambre_119" model="health.room">
+			<field name="name">412</field>
+			<field name="localisation" ref="localisation_BAT1" />
+			<field name="type">1</field>
+			<field name="bed">1</field>
+		</record>
+		<record id="chambre_120" model="health.room">
+			<field name="name">412</field>
+			<field name="localisation" ref="localisation_SA" />
+			<field name="type">1</field>
+			<field name="bed">1</field>
+		</record>
+		<record id="chambre_121" model="health.room">
+			<field name="name">413</field>
+			<field name="localisation" ref="localisation_REPOS" />
+			<field name="type">1</field>
+			<field name="bed">1</field>
+		</record>
+		<record id="chambre_122" model="health.room">
+			<field name="name">415</field>
+			<field name="localisation" ref="localisation_SA" />
+			<field name="type">1</field>
+			<field name="bed">1</field>
+		</record>
+		<record id="chambre_123" model="health.room">
+			<field name="name">416</field>
+			<field name="localisation" ref="localisation_SA" />
+			<field name="type">1</field>
+			<field name="bed">1</field>
+		</record>
+		<record id="chambre_124" model="health.room">
+			<field name="name">418</field>
+			<field name="localisation" ref="localisation_SA" />
+			<field name="type">1</field>
+			<field name="bed">1</field>
+		</record>
+		<record id="chambre_125" model="health.room">
+			<field name="name">501</field>
+			<field name="localisation" ref="localisation_TEMPO2" />
+			<field name="type">2</field>
+			<field name="bed">2</field>
+		</record>
+		<record id="chambre_126" model="health.room">
+			<field name="name">501</field>
+			<field name="localisation" ref="localisation_RES2" />
+			<field name="type">2</field>
+			<field name="bed">2</field>
+		</record>
+		<record id="chambre_127" model="health.room">
+			<field name="name">502</field>
+			<field name="localisation" ref="localisation_RES2" />
+			<field name="type">2</field>
+			<field name="bed">2</field>
+		</record>
+		<record id="chambre_128" model="health.room">
+			<field name="name">510</field>
+			<field name="localisation" ref="localisation_BAT1" />
+			<field name="type">1</field>
+			<field name="bed">1</field>
+		</record>
+		<record id="chambre_129" model="health.room">
+			<field name="name">510</field>
+			<field name="localisation" ref="localisation_BAT2" />
+			<field name="type">2</field>
+			<field name="bed">2</field>
+		</record>
+		<record id="chambre_130" model="health.room">
+			<field name="name">510</field>
+			<field name="localisation" ref="localisation_RES" />
+			<field name="type">1</field>
+			<field name="bed">1</field>
+		</record>
+		<record id="chambre_131" model="health.room">
+			<field name="name">511</field>
+			<field name="localisation" ref="localisation_RES" />
+			<field name="type">1</field>
+			<field name="bed">1</field>
+		</record>
+		<record id="chambre_132" model="health.room">
+			<field name="name">511</field>
+			<field name="localisation" ref="localisation_BAT1" />
+			<field name="type">1</field>
+			<field name="bed">1</field>
+		</record>
+		<record id="chambre_133" model="health.room">
+			<field name="name">512</field>
+			<field name="localisation" ref="localisation_RES" />
+			<field name="type">1</field>
+			<field name="bed">1</field>
+		</record>
+		<record id="chambre_134" model="health.room">
+			<field name="name">513</field>
+			<field name="localisation" ref="localisation_RES" />
+			<field name="type">1</field>
+			<field name="bed">1</field>
+		</record>
+		<record id="chambre_135" model="health.room">
+			<field name="name">513</field>
+			<field name="localisation" ref="localisation_BAT1" />
+			<field name="type">1</field>
+			<field name="bed">1</field>
+		</record>
+		<record id="chambre_136" model="health.room">
+			<field name="name">514</field>
+			<field name="localisation" ref="localisation_RES" />
+			<field name="type">1</field>
+			<field name="bed">1</field>
+		</record>
+		<record id="chambre_137" model="health.room">
+			<field name="name">515</field>
+			<field name="localisation" ref="localisation_RES" />
+			<field name="type">1</field>
+			<field name="bed">1</field>
+		</record>
+		<record id="chambre_138" model="health.room">
+			<field name="name">515</field>
+			<field name="localisation" ref="localisation_BAT1" />
+			<field name="type">1</field>
+			<field name="bed">1</field>
+		</record>
+		<record id="chambre_139" model="health.room">
+			<field name="name">516</field>
+			<field name="localisation" ref="localisation_RES" />
+			<field name="type">1</field>
+			<field name="bed">1</field>
+		</record>
+		<record id="chambre_140" model="health.room">
+			<field name="name">517</field>
+			<field name="localisation" ref="localisation_RES" />
+			<field name="type">1</field>
+			<field name="bed">1</field>
+		</record>
+		<record id="chambre_141" model="health.room">
+			<field name="name">518</field>
+			<field name="localisation" ref="localisation_TEMPORS2" />
+			<field name="type">2</field>
+			<field name="bed">2</field>
+		</record>
+		<record id="chambre_142" model="health.room">
+			<field name="name">518</field>
+			<field name="localisation" ref="localisation_RES" />
+			<field name="type">1</field>
+			<field name="bed">1</field>
+		</record>
+		<record id="chambre_143" model="health.room">
+			<field name="name">520</field>
+			<field name="localisation" ref="localisation_RES" />
+			<field name="type">1</field>
+			<field name="bed">1</field>
+		</record>
+		<record id="chambre_144" model="health.room">
+			<field name="name">521</field>
+			<field name="localisation" ref="localisation_RES" />
+			<field name="type">1</field>
+			<field name="bed">1</field>
+		</record>
+		<record id="chambre_145" model="health.room">
+			<field name="name">522</field>
+			<field name="localisation" ref="localisation_RES" />
+			<field name="type">1</field>
+			<field name="bed">1</field>
+		</record>
+		<record id="chambre_146" model="health.room">
+			<field name="name">523</field>
+			<field name="localisation" ref="localisation_RES" />
+			<field name="type">1</field>
+			<field name="bed">1</field>
+		</record>
+		<record id="chambre_147" model="health.room">
+			<field name="name">524</field>
+			<field name="localisation" ref="localisation_RES" />
+			<field name="type">1</field>
+			<field name="bed">1</field>
+		</record>
+		<record id="chambre_148" model="health.room">
+			<field name="name">525</field>
+			<field name="localisation" ref="localisation_RES" />
+			<field name="type">1</field>
+			<field name="bed">1</field>
+		</record>
+		<record id="chambre_149" model="health.room">
+			<field name="name">526</field>
+			<field name="localisation" ref="localisation_BAT1" />
+			<field name="type">1</field>
+			<field name="bed">1</field>
+		</record>
+		<record id="chambre_150" model="health.room">
+			<field name="name">526</field>
+			<field name="localisation" ref="localisation_RES" />
+			<field name="type">1</field>
+			<field name="bed">1</field>
+		</record>
+		<record id="chambre_151" model="health.room">
+			<field name="name">527</field>
+			<field name="localisation" ref="localisation_RES" />
+			<field name="type">1</field>
+			<field name="bed">1</field>
+		</record>
+		<record id="chambre_152" model="health.room">
+			<field name="name">528</field>
+			<field name="localisation" ref="localisation_RES" />
+			<field name="type">1</field>
+			<field name="bed">1</field>
+		</record>
+		<record id="chambre_153" model="health.room">
+			<field name="name">004 F</field>
+			<field name="localisation" ref="localisation_BAT2" />
+			<field name="type">2</field>
+			<field name="bed">2</field>
+		</record>
+		<record id="chambre_154" model="health.room">
+			<field name="name">007 P</field>
+			<field name="localisation" ref="localisation_BAT2" />
+			<field name="type">2</field>
+			<field name="bed">2</field>
+		</record>
+		<record id="chambre_155" model="health.room">
+			<field name="name">101P</field>
+			<field name="localisation" ref="localisation_BAT2" />
+			<field name="type">2</field>
+			<field name="bed">2</field>
+		</record>
+		<record id="chambre_156" model="health.room">
+			<field name="name">102</field>
+			<field name="localisation" ref="localisation_BAT2" />
+			<field name="type">2</field>
+			<field name="bed">2</field>
+		</record>
+		<record id="chambre_157" model="health.room">
+			<field name="name">102 F</field>
+			<field name="localisation" ref="localisation_BAT2" />
+			<field name="type">2</field>
+			<field name="bed">2</field>
+		</record>
+		<record id="chambre_159" model="health.room">
+			<field name="name">102 P</field>
+			<field name="localisation" ref="localisation_BAT2" />
+			<field name="type">2</field>
+			<field name="bed">2</field>
+		</record>
+		<record id="chambre_160" model="health.room">
+			<field name="name">103 1</field>
+			<field name="localisation" ref="localisation_TEMPO1" />
+			<field name="type">1</field>
+			<field name="bed">1</field>
+		</record>
+		<record id="chambre_161" model="health.room">
+			<field name="name">104 1</field>
+			<field name="localisation" ref="localisation_BAT2" />
+			<field name="type">2</field>
+			<field name="bed">2</field>
+		</record>
+		<record id="chambre_162" model="health.room">
+			<field name="name">104 F</field>
+			<field name="localisation" ref="localisation_BAT2" />
+			<field name="type">2</field>
+			<field name="bed">2</field>
+		</record>
+		<record id="chambre_163" model="health.room">
+			<field name="name">104 P</field>
+			<field name="localisation" ref="localisation_BAT2" />
+			<field name="type">2</field>
+			<field name="bed">2</field>
+		</record>
+		<record id="chambre_164" model="health.room">
+			<field name="name">104/2</field>
+			<field name="localisation" ref="localisation_BAT2" />
+			<field name="type">2</field>
+			<field name="bed">2</field>
+		</record>
+		<record id="chambre_165" model="health.room">
+			<field name="name">104/P</field>
+			<field name="localisation" ref="localisation_TEMPO2" />
+			<field name="type">2</field>
+			<field name="bed">2</field>
+		</record>
+		<record id="chambre_166" model="health.room">
+			<field name="name">105 F</field>
+			<field name="localisation" ref="localisation_BAT2" />
+			<field name="type">2</field>
+			<field name="bed">2</field>
+		</record>
+		<record id="chambre_167" model="health.room">
+			<field name="name">105 P</field>
+			<field name="localisation" ref="localisation_BAT2" />
+			<field name="type">2</field>
+			<field name="bed">2</field>
+		</record>
+		<record id="chambre_168" model="health.room">
+			<field name="name">105</field>
+			<field name="localisation" ref="localisation_BAT2" />
+			<field name="type">2</field>
+			<field name="bed">2</field>
+		</record>
+		
+		<record id="chambre_170" model="health.room">
+			<field name="name">108 F</field>
+			<field name="localisation" ref="localisation_BAT2" />
+			<field name="type">2</field>
+			<field name="bed">2</field>
+		</record>
+		<record id="chambre_171" model="health.room">
+			<field name="name">108 P</field>
+			<field name="localisation" ref="localisation_BAT2" />
+			<field name="type">2</field>
+			<field name="bed">2</field>
+		</record>
+		<record id="chambre_173" model="health.room">
+			<field name="name">108</field>
+			<field name="localisation" ref="localisation_BAT2" />
+			<field name="type">2</field>
+			<field name="bed">2</field>
+		</record>
+		<record id="chambre_174" model="health.room">
+			<field name="name">112 P</field>
+			<field name="localisation" ref="localisation_BAT2" />
+			<field name="type">2</field>
+			<field name="bed">2</field>
+		</record>
+		<record id="chambre_175" model="health.room">
+			<field name="name">112/2</field>
+			<field name="localisation" ref="localisation_BAT2" />
+			<field name="type">2</field>
+			<field name="bed">2</field>
+		</record>
+		<record id="chambre_176" model="health.room">
+			<field name="name">112P</field>
+			<field name="localisation" ref="localisation_BAT2" />
+			<field name="type">2</field>
+			<field name="bed">2</field>
+		</record>
+		<record id="chambre_177" model="health.room">
+			<field name="name">113 P</field>
+			<field name="localisation" ref="localisation_BAT2" />
+			<field name="type">2</field>
+			<field name="bed">2</field>
+		</record>
+		<record id="chambre_178" model="health.room">
+			<field name="name">113F</field>
+			<field name="localisation" ref="localisation_BAT2" />
+			<field name="type">2</field>
+			<field name="bed">2</field>
+		</record>
+		<record id="chambre_179" model="health.room">
+			<field name="name">121/2</field>
+			<field name="localisation" ref="localisation_BAT2" />
+			<field name="type">2</field>
+			<field name="bed">2</field>
+		</record>
+		<record id="chambre_180" model="health.room">
+			<field name="name">121/2</field>
+			<field name="localisation" ref="localisation_TEMPO2" />
+			<field name="type">2</field>
+			<field name="bed">2</field>
+		</record>
+		<record id="chambre_181" model="health.room">
+			<field name="name">121F</field>
+			<field name="localisation" ref="localisation_BAT2" />
+			<field name="type">2</field>
+			<field name="bed">2</field>
+		</record>
+                <record id="chambre_182-1" model="health.room">
+			<field name="name">131</field>
+			<field name="localisation" ref="localisation_BAT2" />
+			<field name="type">2</field>
+			<field name="bed">2</field>
+		</record>
+		<record id="chambre_182" model="health.room">
+			<field name="name">131 F</field>
+			<field name="localisation" ref="localisation_BAT2" />
+			<field name="type">2</field>
+			<field name="bed">2</field>
+		</record>
+		<record id="chambre_183" model="health.room">
+			<field name="name">131 P</field>
+			<field name="localisation" ref="localisation_BAT2" />
+			<field name="type">2</field>
+			<field name="bed">2</field>
+		</record>
+		<record id="chambre_184" model="health.room">
+			<field name="name">137 F</field>
+			<field name="localisation" ref="localisation_BAT2" />
+			<field name="type">2</field>
+			<field name="bed">2</field>
+		</record>
+		<record id="chambre_185" model="health.room">
+			<field name="name">137 P</field>
+			<field name="localisation" ref="localisation_BAT2" />
+			<field name="type">2</field>
+			<field name="bed">2</field>
+		</record>
+		<record id="chambre_186" model="health.room">
+			<field name="name">139 F</field>
+			<field name="localisation" ref="localisation_BAT2" />
+			<field name="type">2</field>
+			<field name="bed">2</field>
+		</record>
+		<record id="chambre_187" model="health.room">
+			<field name="name">139 P</field>
+			<field name="localisation" ref="localisation_BAT2" />
+			<field name="type">2</field>
+			<field name="bed">2</field>
+		</record>
+		<record id="chambre_188" model="health.room">
+			<field name="name">143 F</field>
+			<field name="localisation" ref="localisation_BAT2" />
+			<field name="type">2</field>
+			<field name="bed">2</field>
+		</record>
+		<record id="chambre_189" model="health.room">
+			<field name="name">143 P</field>
+			<field name="localisation" ref="localisation_BAT2" />
+			<field name="type">2</field>
+			<field name="bed">2</field>
+		</record>
+		<record id="chambre_190" model="health.room">
+			<field name="name">145 F</field>
+			<field name="localisation" ref="localisation_BAT2" />
+			<field name="type">2</field>
+			<field name="bed">2</field>
+		</record>
+		<record id="chambre_191" model="health.room">
+			<field name="name">145 P</field>
+			<field name="localisation" ref="localisation_BAT2" />
+			<field name="type">2</field>
+			<field name="bed">2</field>
+		</record>
+		<record id="chambre_192" model="health.room">
+			<field name="name">160 F</field>
+			<field name="localisation" ref="localisation_BAT2" />
+			<field name="type">2</field>
+			<field name="bed">2</field>
+		</record>
+		<record id="chambre_193" model="health.room">
+			<field name="name">160 P</field>
+			<field name="localisation" ref="localisation_BAT2" />
+			<field name="type">2</field>
+			<field name="bed">2</field>
+		</record>
+		<record id="chambre_194" model="health.room">
+			<field name="name">161 F</field>
+			<field name="localisation" ref="localisation_BAT2" />
+			<field name="type">2</field>
+			<field name="bed">2</field>
+		</record>
+		<record id="chambre_195" model="health.room">
+			<field name="name">161 P</field>
+			<field name="localisation" ref="localisation_BAT2" />
+			<field name="type">2</field>
+			<field name="bed">2</field>
+		</record>
+		<record id="chambre_196" model="health.room">
+			<field name="name">163 F</field>
+			<field name="localisation" ref="localisation_BAT2" />
+			<field name="type">2</field>
+			<field name="bed">2</field>
+		</record>
+		<record id="chambre_197" model="health.room">
+			<field name="name">163 P</field>
+			<field name="localisation" ref="localisation_BAT2" />
+			<field name="type">2</field>
+			<field name="bed">2</field>
+		</record>
+		<record id="chambre_198" model="health.room">
+			<field name="name">164 F</field>
+			<field name="localisation" ref="localisation_BAT2" />
+			<field name="type">2</field>
+			<field name="bed">2</field>
+		</record>
+		<record id="chambre_199" model="health.room">
+			<field name="name">164 p</field>
+			<field name="localisation" ref="localisation_BAT2" />
+			<field name="type">2</field>
+			<field name="bed">2</field>
+		</record>
+		<record id="chambre_200" model="health.room">
+			<field name="name">164 P</field>
+			<field name="localisation" ref="localisation_BAT2" />
+			<field name="type">2</field>
+			<field name="bed">2</field>
+		</record>
+		<record id="chambre_201" model="health.room">
+			<field name="name">201P</field>
+			<field name="localisation" ref="localisation_BAT2" />
+			<field name="type">2</field>
+			<field name="bed">2</field>
+		</record>
+		<record id="chambre_207" model="health.room">
+			<field name="name">202F</field>
+			<field name="localisation" ref="localisation_BAT2" />
+			<field name="type">2</field>
+			<field name="bed">2</field>
+		</record>
+		<record id="chambre_208" model="health.room">
+			<field name="name">202</field>
+			<field name="localisation" ref="localisation_BAT2" />
+			<field name="type">2</field>
+			<field name="bed">2</field>
+		</record>
+		<record id="chambre_208" model="health.room">
+			<field name="name">202P</field>
+			<field name="localisation" ref="localisation_BAT2" />
+			<field name="type">2</field>
+			<field name="bed">2</field>
+		</record>
+		<record id="chambre_209" model="health.room">
+			<field name="name">203</field>
+			<field name="localisation" ref="localisation_BAT1" />
+			<field name="type">1</field>
+			<field name="bed">1</field>
+		</record>
+		<record id="chambre_210" model="health.room">
+			<field name="name">204 F</field>
+			<field name="localisation" ref="localisation_BAT2" />
+			<field name="type">2</field>
+			<field name="bed">2</field>
+		</record>
+		<record id="chambre_211" model="health.room">
+			<field name="name">204 P</field>
+			<field name="localisation" ref="localisation_BAT2" />
+			<field name="type">2</field>
+			<field name="bed">2</field>
+		</record>
+		<record id="chambre_212" model="health.room">
+			<field name="name">204</field>
+			<field name="localisation" ref="localisation_BAT2" />
+			<field name="type">2</field>
+			<field name="bed">2</field>
+		</record>
+		<record id="chambre_213" model="health.room">
+			<field name="name">208</field>
+			<field name="localisation" ref="localisation_BAT2" />
+			<field name="type">2</field>
+			<field name="bed">2</field>
+		</record>
+		<record id="chambre_214" model="health.room">
+			<field name="name">212 P</field>
+			<field name="localisation" ref="localisation_BAT2" />
+			<field name="type">2</field>
+			<field name="bed">2</field>
+		</record>
+		<record id="chambre_215" model="health.room">
+			<field name="name">212</field>
+			<field name="localisation" ref="localisation_BAT2" />
+			<field name="type">2</field>
+			<field name="bed">2</field>
+		</record>
+		<record id="chambre_216" model="health.room">
+			<field name="name">213 F</field>
+			<field name="localisation" ref="localisation_BAT2" />
+			<field name="type">2</field>
+			<field name="bed">2</field>
+		</record>
+		<record id="chambre_217" model="health.room">
+			<field name="name">213 P</field>
+			<field name="localisation" ref="localisation_BAT2" />
+			<field name="type">2</field>
+			<field name="bed">2</field>
+		</record>
+		<record id="chambre_218" model="health.room">
+			<field name="name">213</field>
+			<field name="localisation" ref="localisation_BAT2" />
+			<field name="type">2</field>
+			<field name="bed">2</field>
+		</record>
+		<record id="chambre_219" model="health.room">
+			<field name="name">214 F</field>
+			<field name="localisation" ref="localisation_BAT2" />
+			<field name="type">2</field>
+			<field name="bed">2</field>
+		</record>
+		<record id="chambre_220" model="health.room">
+			<field name="name">214 P</field>
+			<field name="localisation" ref="localisation_BAT2" />
+			<field name="type">2</field>
+			<field name="bed">2</field>
+		</record>
+		<record id="chambre_221" model="health.room">
+			<field name="name">214</field>
+			<field name="localisation" ref="localisation_BAT2" />
+			<field name="type">2</field>
+			<field name="bed">2</field>
+		</record>
+		<record id="chambre_222" model="health.room">
+			<field name="name">220 F</field>
+			<field name="localisation" ref="localisation_BAT2" />
+			<field name="type">2</field>
+			<field name="bed">2</field>
+		</record>
+		<record id="chambre_223" model="health.room">
+			<field name="name">231 P</field>
+			<field name="localisation" ref="localisation_BAT2" />
+			<field name="type">2</field>
+			<field name="bed">2</field>
+		</record>
+		<record id="chambre_224" model="health.room">
+			<field name="name">237 F</field>
+			<field name="localisation" ref="localisation_BAT2" />
+			<field name="type">2</field>
+			<field name="bed">2</field>
+		</record>
+		<record id="chambre_225_1" model="health.room">
+			<field name="name">237</field>
+			<field name="localisation" ref="localisation_BAT2" />
+			<field name="type">2</field>
+			<field name="bed">2</field>
+		</record>
+		<record id="chambre_225" model="health.room">
+			<field name="name">237 P</field>
+			<field name="localisation" ref="localisation_BAT2" />
+			<field name="type">2</field>
+			<field name="bed">2</field>
+		</record>
+		<record id="chambre_226" model="health.room">
+			<field name="name">239 1</field>
+			<field name="localisation" ref="localisation_BAT2" />
+			<field name="type">2</field>
+			<field name="bed">2</field>
+		</record>
+		<record id="chambre_227" model="health.room">
+			<field name="name">239 F</field>
+			<field name="localisation" ref="localisation_BAT2" />
+			<field name="type">2</field>
+			<field name="bed">2</field>
+		</record>
+		<record id="chambre_228" model="health.room">
+			<field name="name">239 P</field>
+			<field name="localisation" ref="localisation_BAT1" />
+			<field name="type">1</field>
+			<field name="bed">1</field>
+		</record>
+		<record id="chambre_229" model="health.room">
+			<field name="name">239 P</field>
+			<field name="localisation" ref="localisation_BAT2" />
+			<field name="type">2</field>
+			<field name="bed">2</field>
+		</record>
+		<record id="chambre_230" model="health.room">
+			<field name="name">243 F</field>
+			<field name="localisation" ref="localisation_BAT2" />
+			<field name="type">2</field>
+			<field name="bed">2</field>
+		</record>
+		<record id="chambre_231" model="health.room">
+			<field name="name">243 P</field>
+			<field name="localisation" ref="localisation_BAT2" />
+			<field name="type">2</field>
+			<field name="bed">2</field>
+		</record>
+		<record id="chambre_232_1" model="health.room">
+			<field name="name">245</field>
+			<field name="localisation" ref="localisation_BAT2" />
+			<field name="type">2</field>
+			<field name="bed">2</field>
+		</record>
+		<record id="chambre_232" model="health.room">
+			<field name="name">245 F</field>
+			<field name="localisation" ref="localisation_BAT2" />
+			<field name="type">2</field>
+			<field name="bed">2</field>
+		</record>
+		<record id="chambre_233" model="health.room">
+			<field name="name">245 P</field>
+			<field name="localisation" ref="localisation_BAT2" />
+			<field name="type">2</field>
+			<field name="bed">2</field>
+		</record>
+		<record id="chambre_234" model="health.room">
+			<field name="name">253 F</field>
+			<field name="localisation" ref="localisation_BAT2" />
+			<field name="type">2</field>
+			<field name="bed">2</field>
+		</record>
+		<record id="chambre_235" model="health.room">
+			<field name="name">253 P</field>
+			<field name="localisation" ref="localisation_BAT2" />
+			<field name="type">2</field>
+			<field name="bed">2</field>
+		</record>
+		<record id="chambre_236" model="health.room">
+			<field name="name">265 F</field>
+			<field name="localisation" ref="localisation_BAT2" />
+			<field name="type">2</field>
+			<field name="bed">2</field>
+		</record>
+		<record id="chambre_237" model="health.room">
+			<field name="name">265 P</field>
+			<field name="localisation" ref="localisation_BAT2" />
+			<field name="type">2</field>
+			<field name="bed">2</field>
+		</record>
+		<record id="chambre_238" model="health.room">
+			<field name="name">266 F</field>
+			<field name="localisation" ref="localisation_BAT2" />
+			<field name="type">2</field>
+			<field name="bed">2</field>
+		</record>
+		<record id="chambre_239" model="health.room">
+			<field name="name">266 P</field>
+			<field name="localisation" ref="localisation_BAT2" />
+			<field name="type">2</field>
+			<field name="bed">2</field>
+		</record>
+		<record id="chambre_240" model="health.room">
+			<field name="name">302</field>
+			<field name="localisation" ref="localisation_BAT2" />
+			<field name="type">2</field>
+			<field name="bed">2</field>
+		</record>
+		<record id="chambre_241" model="health.room">
+			<field name="name">302F</field>
+			<field name="localisation" ref="localisation_BAT2" />
+			<field name="type">2</field>
+			<field name="bed">2</field>
+		</record>
+		<record id="chambre_242" model="health.room">
+			<field name="name">302P</field>
+			<field name="localisation" ref="localisation_BAT2" />
+			<field name="type">2</field>
+			<field name="bed">2</field>
+		</record>
+		<record id="chambre_243" model="health.room">
+			<field name="name">305 F</field>
+			<field name="localisation" ref="localisation_BAT2" />
+			<field name="type">2</field>
+			<field name="bed">2</field>
+		</record>
+		<record id="chambre_244" model="health.room">
+			<field name="name">305 P</field>
+			<field name="localisation" ref="localisation_BAT2" />
+			<field name="type">2</field>
+			<field name="bed">2</field>
+		</record>
+		<record id="chambre_245" model="health.room">
+			<field name="name">305/2</field>
+			<field name="localisation" ref="localisation_BAT1" />
+			<field name="type">1</field>
+			<field name="bed">1</field>
+		</record>
+		<record id="chambre_246" model="health.room">
+			<field name="name">305/F</field>
+			<field name="localisation" ref="localisation_BAT2" />
+			<field name="type">2</field>
+			<field name="bed">2</field>
+		</record>
+		<record id="chambre_247" model="health.room">
+			<field name="name">305P</field>
+			<field name="localisation" ref="localisation_BAT2" />
+			<field name="type">2</field>
+			<field name="bed">2</field>
+		</record>
+		<record id="chambre_248" model="health.room">
+			<field name="name">308</field>
+			<field name="localisation" ref="localisation_BAT1" />
+			<field name="type">1</field>
+			<field name="bed">1</field>
+		</record>
+		<record id="chambre_249" model="health.room">
+			<field name="name">313 F</field>
+			<field name="localisation" ref="localisation_BAT2" />
+			<field name="type">2</field>
+			<field name="bed">2</field>
+		</record>
+		<record id="chambre_250" model="health.room">
+			<field name="name">313 P</field>
+			<field name="localisation" ref="localisation_BAT2" />
+			<field name="type">2</field>
+			<field name="bed">2</field>
+		</record>
+		<record id="chambre_251" model="health.room">
+			<field name="name">313/1</field>
+			<field name="localisation" ref="localisation_BAT1" />
+			<field name="type">1</field>
+			<field name="bed">1</field>
+		</record>
+		<record id="chambre_252" model="health.room">
+			<field name="name">313P</field>
+			<field name="localisation" ref="localisation_BAT2" />
+			<field name="type">2</field>
+			<field name="bed">2</field>
+		</record>
+		<record id="chambre_253" model="health.room">
+			<field name="name">321F</field>
+			<field name="localisation" ref="localisation_BAT2" />
+			<field name="type">2</field>
+			<field name="bed">2</field>
+		</record>
+		
+                <record id="chambre_254" model="health.room">
+			<field name="name">341 F</field>
+			<field name="localisation" ref="localisation_BAT2" />
+			<field name="type">2</field>
+			<field name="bed">2</field>
+		</record>
+		<record id="chambre_255" model="health.room">
+			<field name="name">341 P</field>
+			<field name="localisation" ref="localisation_BAT2" />
+			<field name="type">2</field>
+			<field name="bed">2</field>
+		</record>
+		<record id="chambre_254-1" model="health.room">
+			<field name="name">341</field>
+			<field name="localisation" ref="localisation_BAT2" />
+			<field name="type">2</field>
+			<field name="bed">2</field>
+		</record>
+                <record id="chambre_256" model="health.room">
+			<field name="name">343 F</field>
+			<field name="localisation" ref="localisation_BAT2" />
+			<field name="type">2</field>
+			<field name="bed">2</field>
+		</record>
+		<record id="chambre_257" model="health.room">
+			<field name="name">343 P</field>
+			<field name="localisation" ref="localisation_BAT2" />
+			<field name="type">2</field>
+			<field name="bed">2</field>
+		</record>
+		<record id="chambre_258" model="health.room">
+			<field name="name">361 F</field>
+			<field name="localisation" ref="localisation_BAT2" />
+			<field name="type">2</field>
+			<field name="bed">2</field>
+		</record>
+		<record id="chambre_259" model="health.room">
+			<field name="name">361 P</field>
+			<field name="localisation" ref="localisation_BAT2" />
+			<field name="type">2</field>
+			<field name="bed">2</field>
+		</record>
+		<record id="chambre_260" model="health.room">
+			<field name="name">4 F</field>
+			<field name="localisation" ref="localisation_BAT2" />
+			<field name="type">2</field>
+			<field name="bed">2</field>
+		</record>
+		<record id="chambre_261" model="health.room">
+			<field name="name">4 P</field>
+			<field name="localisation" ref="localisation_BAT2" />
+			<field name="type">2</field>
+			<field name="bed">2</field>
+		</record>
+		<record id="chambre_262" model="health.room">
+			<field name="name">4F</field>
+			<field name="localisation" ref="localisation_BAT2" />
+			<field name="type">2</field>
+			<field name="bed">2</field>
+		</record>
+		<record id="chambre_263" model="health.room">
+			<field name="name">5 F</field>
+			<field name="localisation" ref="localisation_BAT2" />
+			<field name="type">2</field>
+			<field name="bed">2</field>
+		</record>
+		<record id="chambre_264" model="health.room">
+			<field name="name">501 F</field>
+			<field name="localisation" ref="localisation_RES2" />
+			<field name="type">2</field>
+			<field name="bed">2</field>
+		</record>
+		<record id="chambre_265" model="health.room">
+			<field name="name">501 P</field>
+			<field name="localisation" ref="localisation_RES2" />
+			<field name="type">2</field>
+			<field name="bed">2</field>
+		</record>
+		<record id="chambre_266" model="health.room">
+			<field name="name">501/1</field>
+			<field name="localisation" ref="localisation_RES2" />
+			<field name="type">2</field>
+			<field name="bed">2</field>
+		</record>
+		<record id="chambre_267" model="health.room">
+			<field name="name">501/2</field>
+			<field name="localisation" ref="localisation_TEMPORS2" />
+			<field name="type">2</field>
+			<field name="bed">2</field>
+		</record>
+		<record id="chambre_268" model="health.room">
+			<field name="name">502 F</field>
+			<field name="localisation" ref="localisation_RES2" />
+			<field name="type">2</field>
+			<field name="bed">2</field>
+		</record>
+		<record id="chambre_269" model="health.room">
+			<field name="name">502 P</field>
+			<field name="localisation" ref="localisation_RES2" />
+			<field name="type">2</field>
+			<field name="bed">2</field>
+		</record>
+		<record id="chambre_270" model="health.room">
+			<field name="name">502 P</field>
+			<field name="localisation" ref="localisation_BAT2" />
+			<field name="type">2</field>
+			<field name="bed">2</field>
+		</record>
+		<record id="chambre_271" model="health.room">
+			<field name="name">502/2</field>
+			<field name="localisation" ref="localisation_RES2" />
+			<field name="type">2</field>
+			<field name="bed">2</field>
+		</record>
+		<record id="chambre_272" model="health.room">
+			<field name="name">502/F</field>
+			<field name="localisation" ref="localisation_TEMPORS2" />
+			<field name="type">2</field>
+			<field name="bed">2</field>
+		</record>
+		<record id="chambre_273" model="health.room">
+			<field name="name">5F</field>
+			<field name="localisation" ref="localisation_BAT2" />
+			<field name="type">2</field>
+			<field name="bed">2</field>
+		</record>
+		<record id="chambre_274" model="health.room">
+			<field name="name">61 P</field>
+			<field name="localisation" ref="localisation_BAT2" />
+			<field name="type">2</field>
+			<field name="bed">2</field>
+		</record>
+		<record id="chambre_275" model="health.room">
+			<field name="name">63 F</field>
+			<field name="localisation" ref="localisation_BAT2" />
+			<field name="type">2</field>
+			<field name="bed">2</field>
+		</record>
+		<record id="chambre_276" model="health.room">
+			<field name="name">63 P</field>
+			<field name="localisation" ref="localisation_BAT2" />
+			<field name="type">2</field>
+			<field name="bed">2</field>
+		</record>
+		<record id="chambre_277" model="health.room">
+			<field name="name">7 P</field>
+			<field name="localisation" ref="localisation_BAT2" />
+			<field name="type">2</field>
+			<field name="bed">2</field>
+		</record>
+		<record id="chambre_278" model="health.room">
+			<field name="name">7 P</field>
+			<field name="localisation" ref="localisation_BAT1" />
+			<field name="type">1</field>
+			<field name="bed">1</field>
+		</record>
+		<record id="chambre_279" model="health.room">
+			<field name="name">7/P</field>
+			<field name="localisation" ref="localisation_BAT2" />
+			<field name="type">2</field>
+			<field name="bed">2</field>
+		</record>
+		<record id="chambre_280" model="health.room">
+			<field name="name">7F</field>
+			<field name="localisation" ref="localisation_BAT2" />
+			<field name="type">2</field>
+			<field name="bed">2</field>
+		</record>
+		<record id="chambre_281" model="health.room">
+			<field name="name">7P</field>
+			<field name="localisation" ref="localisation_BAT2" />
+			<field name="type">2</field>
+			<field name="bed">2</field>
+		</record>
+		
+	
+
+	</data>
+</terp>

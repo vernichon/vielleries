@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<terp>
+	<data>
+		<record model="ir.ui.view" id="product_product_ext_form_view2">
+			<field name="name">product_extendedsp.product.form.view</field>
+			<field name="model">product.product</field>
+			<field name="type">form</field>
+			<field name="priority">3</field>
+			<field name="inherit_id" ref="product.product_normal_form_view" />
+			<field name="arch" type="xml">
+				<field name="seller_ids" position="before">
+					<field name="calculate_price" />
+					<button name="compute_price" type="object" string="Calculer prix de vente"/>
+				</field>
+			</field>
+		</record>
+	</data>
+</terp>
+

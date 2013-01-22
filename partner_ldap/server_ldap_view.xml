@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<terp>
+	<data>
+		<record model="ir.ui.view" id="tiny_ldap_form">
+			<field name="name">server_ldap.server.form</field>
+			<field name="model">server_ldap.server</field>
+			<field name="type">form</field>
+			<field name="arch" type="xml">
+				<form string="Serveur Ldap">
+					<field name="designation" />
+					<field name="server_ldap" />
+					<field name="bind_dn"  />
+					<field name="base_dn" />
+					<field name="password" />
+				</form>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="tiny_ldap_tree">
+			<field name="name">server_ldap.server.tree</field>
+			<field name="model">server_ldap.server</field>
+			<field name="type">tree</field>
+			<field name="arch" type="xml">
+				<tree string="Serveur Ldap">
+					<field name="designation" />
+					<field name="server_ldap" />
+					<field name="bind_dn"  />
+					<field name="base_dn" />
+				</tree>
+			</field>
+		</record>
+		<record model="ir.actions.act_window" id="ldap_server">
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">server_ldap.server</field>
+			<field name="view_mode">form,tree</field>
+		</record>
+		<menuitem name="LDAP/Configuration" id="menu_ldap_conf"  sequence="1"/>
+		<menuitem name="LDAP/Configuration/Serveurs" id="menu_tiny_server" action="ldap_server" sequence="1"/>
+		<wizard string="Synchronize with ldap" model="res.partner.address" name="sync_ldap" id="sync_ldap" />
+		<menuitem name="LDAP/Synchroniser  les contacts vers LDAP" action="sync_ldap" type="wizard" id="menu_ldap" sequence="2" />
+		<wizard string="Synchronize from ldap" model="res.partner.address" name="ldap_sync" id="ldap_sync" />
+		<menuitem name="LDAP/Synchroniser les contacts depuis LDAP" action="ldap_sync" type="wizard" id="menu_ldap_sync" sequence="3" />
+		
+	</data>
+</terp>

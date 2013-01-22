@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<terp>
+<data>
+	<delete model="ir.ui.view" search="[('name','like','asset')]"/>
+	<delete model="ir.actions.act_window" search="[('name','like','asset')]"/>
+	<!--<record model="ir.ui.view" id="view_immo_invoice_form">
+  		<field name="name">account.invoice.supplier.form.inherit</field> 
+    		<field name="model">account.invoice.line</field> 
+      		<field name="type">form</field>
+        	<field name="inherit_id" ref="account.view_invoice_line_form" />
+		<field name="arch" type="xml" >
+			<field name="discount" position="after">
+				<button type="action" name="%(wizard_amortir_line)d" string="Immobiliser" />
+			</field>
+		</field>
+	</record>-->
+	-<record model="ir.ui.view" id="view_asset_form">
+		<field name="name">asset.form</field>
+		<field name="model">asset.simulation</field>
+		<field name="type">form</field>
+		<field name="arch" type="xml">
+			<form string="Simulation Immobilisation">
+				<field name="nordre" select="1" />
+				<field name="name" select="1" />
+				<field name="date" select="1" />
+				<field name="base" select="2"/>
+				<field name="methode" select="2"/>
+				<field name="methodefisc" select="2"/>
+				<field name="duree" select="2"/>
+				<field name="coefd" select="2"/>
+				<newline/>
+				<field name="compteamort"/>
+				<field name="comptedepreciation"  />
+				<field name="compteimmo" />
+				<field name="comptefournisseur"  />
+				<field name="journal_id"  />
+				<field name="notes"  />
+				<field name="amortissement"  colspan="4"  nolabel="1"/>
+			</form>
+		</field>
+	</record> 
+         <record model="ir.ui.view" id="view_asset_tree">
+		<field name="name">asset.tree</field>
+		<field name="model">asset.simulation</field>
+		<field name="type">tree</field>
+		<field name="arch" type="xml">
+			<tree string="Simulation Immobilisation" editable="bottom">
+				<field name="name" select="1"/>
+				<field name="nordre" select="1" />
+				<field name="date" select="1" />
+				<field name="base" select="2"/>
+				<field name="methode" select="2"/>
+				<field name="methodefisc" select="2"/>
+				<field name="duree" select="2"/>
+				<field name="coefd" select="2"/>
+				<field name="compteimmo"  />
+			</tree>
+		</field>
+	</record>
+	 <record model="ir.actions.act_window" id="action_asset_form">
+                <field name="name">Simulation Immobilisations</field>
+                <field name="res_model">asset.simulation</field>
+                <field name="view_type">form</field>
+        </record>
+	 <record model="ir.actions.act_window.view" id="action_asset_form_view1">
+		<field name="sequence" eval="10"/>
+		<field name="view_mode">tree</field>
+		<field name="view_id" ref="view_asset_tree"/>
+		<field name="act_window_id" ref="action_asset_form"/>
+	</record>
+	<record model="ir.actions.act_window.view" id="action_asset_form_view2">
+		<field name="sequence" eval="20"/>
+		<field name="view_mode">form</field>
+		<field name="view_id" ref="view_asset_form"/>
+		<field name="act_window_id" ref="action_asset_form"/>
+	</record>
+	<menuitem name="Financial Management/Immobilisations/simulation/Immobilisations" action="action_asset_form" id="menu_asset_form" />
+	
+	-<record model="ir.ui.view" id="view_asset_entry_form">
+		<field name="name">asset.simulation.amort.form</field>
+		<field name="model">asset.simulation.amort</field>
+		<field name="type">form</field>
+		<field name="arch" type="xml">
+			<form string="Simulation Amortissement">
+				<field name="name" select="1" />
+				<field name="asset_id" select="2"/>
+				<field name="txl" select="2"/>
+				<field name="txd" select="2"/>
+				<field name="vcndebut" select="2"/>
+				<field name="annuites"  />
+				<field name="vresiduelle"   />
+				<field name="cumul"  />
+			</form>
+		</field>
+	</record>
+         <record model="ir.ui.view" id="view_asset_entry_tree">
+		<field name="name">asset.simulation.amort.tree</field>
+		<field name="model">asset.simulation.amort</field>
+		<field name="type">tree</field>
+		<field name="arch" type="xml">
+			<tree string="Simulation Amortissement" editable="bottom">
+				<field name="name" select="1" />
+				<field name="methode" select="2"/>
+				<field name="txl" select="2"/>
+				<field name="txd" select="2"/>
+				<field name="vcndebut" select="2"/>
+				<field name="annuites"  />
+				<field name="vresiduelle"   />
+				<field name="cumul"  />
+			</tree>
+		</field>
+	</record>
+	 <record model="ir.actions.act_window" id="action_asset_simulation_amort_tree">
+                <field name="name">Simulation Amortissement</field>
+		<field name="type">ir.actions.act_window</field>
+                <field name="res_model">asset.simulation.amort</field>
+		 <field name="view_type">tree</field>
+		<field name="view_mode">form,tree</field>
+        </record>
+	 <menuitem name="Financial Management/Immobilisations/simulation/Amortissement" action="action_asset_simulation_amort_tree" id="menu_asset_simulation_amort_tree"/>
+	 
+	 
+	 <record model="ir.ui.view" id="view_immobilisation_form">
+		<field name="name">immobilisation.form</field>
+		<field name="model">asset.immobilisation</field>
+		<field name="type">form</field>
+		<field name="arch" type="xml">
+			<form string="Immobilisation">
+				<field name="nordre" select="1" />
+				<field name="name" select="1" />
+				<field name="date" select="1" />
+				<field name="base" select="2"/>
+				<field name="methode" select="2"/>
+				<field name="methodefisc" select="2"/>
+				<field name="duree" select="2"/>
+				<field name="coef" select="2"/>
+				<field name="vresiduelle"  />
+				<newline/>
+				<field name="compteamort"/>
+				<field name="comptedepreciation"  />
+				<field name="compteimmo" />
+				<field name="comptefournisseur"  />
+				<field name="journal_id"  />
+				<field name="notes"  />
+				<field name="mouvement"  colspan="4"  nolabel="1"/>
+			</form>
+		</field>
+	</record> 
+         <record model="ir.ui.view" id="view_immobilisation_tree">
+		<field name="name">immobilisation.tree</field>
+		<field name="model">asset.immobilisation</field>
+		<field name="type">tree</field>
+		<field name="arch" type="xml">
+			<tree string="Immobilisation" editable="bottom">
+		<field name="nordre" select="1" />
+				<field name="name" select="1" />
+				<field name="date" select="1" />
+				<field name="base" select="2"/>
+				<field name="methode" select="2"/>
+				<field name="methodefisc" select="2"/>
+				<field name="duree" select="2"/>
+				<field name="coef" select="2"/>
+				<field name="vresiduelle"  />
+				<field name="compteimmo"  />
+				<field name="comptefournisseur"  />
+				<field name="compteamort"/>
+				<field name="comptedepreciation"  />
+				<field name="journal_id"  />
+					</tree>
+		</field>
+	</record>
+	 <record model="ir.actions.act_window" id="action_immobilisation_form">
+                <field name="name">Immobilisations</field>
+                <field name="res_model">asset.immobilisation</field>
+                <field name="view_type">form</field>
+	</record>
+<menuitem name="Financial Management/Immobilisations/Immobilisation" action="action_immobilisation_form" id="menu_immobilisation_form"/>		
+	-<record model="ir.ui.view" id="view_asset_amortissement_form">
+		<field name="name">asset.amortissement.form</field>
+		<field name="model">asset.amortissement</field>
+		<field name="type">form</field>
+		<field name="arch" type="xml">
+			<form string="Mouvements">
+				<field name="asset_id" select="2"/>
+				<field name="date"  />
+				<field name="operation"  />
+				<field name="credit"   />
+				<field name="debit"  />
+				<field name="vnc"   />
+				<field name="drestante"   />
+			</form>
+		</field>
+	</record>
+         <record model="ir.ui.view" id="view_asset_amortissement_tree">
+		<field name="name">asset.amortissement.tree</field>
+		<field name="model">asset.amortissement</field>
+		<field name="type">tree</field>
+		<field name="arch" type="xml">
+			<tree string="Mouvements" editable="bottom">
+				<field name="asset_id" select="2"/>
+				<field name="date"  />
+				<field name="operation"  />
+				<field name="credit"   />
+				<field name="debit"  />
+				<field name="vnc"   />
+				<field name="drestante"   />
+
+			</tree>
+		</field>
+	</record>
+	 <record model="ir.actions.act_window" id="action_asset_amortissement_tree">
+                <field name="name">Mouvements</field>
+		<field name="type">ir.actions.act_window</field>
+                <field name="res_model">asset.amortissement</field>
+		 <field name="view_type">form</field>
+
+        </record>
+	 <menuitem name="Financial Management/Immobilisations/Mouvements" action="action_asset_amortissement_tree" id="menu_asset_amortissement_tree"/>
+</data>
+</terp>

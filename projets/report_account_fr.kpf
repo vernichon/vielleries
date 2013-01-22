@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Komodo Project File - DO NOT EDIT -->
+<project id="114ABD0C138L557692760x147f" name="reoprt_account_fr.kpf" kpf_version="2">
+<preference-set id="">
+  <string id="import_dirname">/opt/svn/tiny/modules/report_account_fr</string>
+</preference-set>
+<file url="file:///opt/svn/tiny/modules/report_account_fr/__init__.py" id="114ABD11E08L70605e780x147f" name="__init__.py">
+</file>
+<file url="file:///opt/svn/tiny/modules/report_account_fr/__terp__.py" id="114ABD11E0CL15cc60f80x147f" name="__terp__.py">
+</file>
+<file url="file:///opt/svn/tiny/modules/report_account_fr/report_account_fr.py" id="114ABD11E0CL2dfc05830x147f" name="report_account_fr.py">
+</file>
+<file url="file:///opt/svn/tiny/modules/report_account_fr/report_account_fr_view.xml" id="114ABD11E0CL43edba040x147f" name="report_account_fr_view.xml">
+</file>
+<file url="file:///opt/svn/tiny/modules/report_account_fr/report_account_fr_report.xml" id="114ABD11E0CL3a98231d0x147f" name="report_account_fr_report.xml">
+</file>
+<folder url="file:///opt/svn/tiny/modules/report_account_fr/report" id="114ABD11E10L2a04716b0x147f" name="report">
+<file url="file:///opt/svn/tiny/modules/report_account_fr/report/__init__.py" id="114ABD11E0CL1abbfac50x147f" name="__init__.py">
+</file>
+<file url="file:///opt/svn/tiny/modules/report_account_fr/report/resultat.py" id="114ABD11E0CL32dab0900x147f" name="resultat.py">
+</file>
+<file url="file:///opt/svn/tiny/modules/report_account_fr/report/compte_de_resultat.rml" id="114ABD11E0CL46f4720x147f" name="compte_de_resultat.rml">
+</file>
+<file url="file:///opt/svn/tiny/modules/report_account_fr/report/bilan.py" id="114B6CDE2E7L32fa694f0x21ea" name="bilan.py">
+</file>
+</folder>
+<folder url="file:///opt/svn/tiny/modules/report_account_fr/wizard" id="114ABD11E12L79e478a80x147f" name="wizard">
+<preference-set id="">
+</preference-set>
+<file url="file:///opt/svn/tiny/modules/report_account_fr/wizard/__init__.py" id="114ABD11E0CL767e111e0x147f" name="__init__.py">
+</file>
+<file url="file:///opt/svn/tiny/modules/report_account_fr/wizard/resultat.py" id="114ABD11E0DL2ae577640x147f" name="resultat.py">
+<preference-set id="">
+  <string id="lastInvocation">default</string>
+<preference-set id="Invocations">
+<preference-set id="default">
+  <string id="postparams"></string>
+  <string id="userEnvironment"></string>
+  <string id="getparams"></string>
+  <boolean id="use-console">0</boolean>
+  <string id="executable-params"></string>
+  <boolean id="show-dialog">1</boolean>
+  <string id="request-method">GET</string>
+  <string id="params"></string>
+  <string id="mpostparams"></string>
+  <string id="posttype">application/x-www-form-urlencoded</string>
+  <string id="documentRoot"></string>
+  <string id="cookieparams"></string>
+  <string id="filename">/opt/svn/tiny/modules/report_account_fr/wizard/resultat.py</string>
+  <boolean id="sim-cgi">0</boolean>
+  <string id="cwd"></string>
+  <string id="userCGIEnvironment"></string>
+</preference-set>
+</preference-set>
+</preference-set>
+</file>
+<file url="file:///opt/svn/tiny/modules/report_account_fr/wizard/bilan.py" id="114B6CDFF47L5032c86f0x21ea" name="bilan.py">
+</file>
+</folder>
+</project>

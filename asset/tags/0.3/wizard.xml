@@ -1,0 +1,34 @@
+﻿<?xml version="1.0"?>
+<terp>
+<data>
+<wizard id="wizard_amortir"
+   string="Immobiliser"
+   model="account.invoice"
+   name="amortir" />
+
+ <wizard id="wizard_amortir_line"
+   string="Immobiliser ligne"
+   model="account.invoice.line"
+   name="amortir.line" />
+
+<wizard id="wizard_valider"
+   string="Valider"
+   model="asset.simulation"
+   name="valider" />
+
+<wizard id="wizard_calculer"
+   string="Calculer"
+   model="asset.simulation"
+   name="calculer" />
+
+<wizard id="wizard_amortir_move"
+   string="Amortir"
+   model="asset.immobilisation"
+   name="amortir.immobilisation" />
+<wizard id="wizard_comptabiliser"
+   string="Comptabiliser"
+   model="asset.immobilisation"
+   name="comptabiliser.immobilisation" />
+
+</data>
+</terp>

@@ -1,0 +1,7 @@
+<?xml version="1.0" ?>
+<terp>
+	<data>
+		<wizard string="Synchronize with ldap" model="res.partner.address" name="sync_ldap" id="sync_ldap" />
+		<menuitem name="Partners/Synchroniser  avec LDAP" action="sync_ldap" type="wizard" id="menu_ldap" />
+	</data>
+</terp>

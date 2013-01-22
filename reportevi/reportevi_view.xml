@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<terp>
+<data>
+	<record model="ir.ui.view" id="view_compte_form">
+		<field name="name">compte.annuel.tree</field>
+		<field name="model">compte.annuel</field>
+		<field name="type">form</field>
+		<field name="arch" type="xml">
+			<form string="Compte Annuel">
+				<field name="annee" select="1" />
+				<field name="name" select="2"/>
+				<field name="debit"/>
+				<field name="credit"/>
+				
+			</form>
+		</field>
+	</record>
+<record model="ir.ui.view" id="view_compte_tree">
+		<field name="name">compte.annuel.tree</field>
+		<field name="model">compte.annuel</field>
+		<field name="type">tree</field>
+		<field name="arch" type="xml">
+			<tree string="Compte Annuel">
+				<field name="annee" select="1" />
+				<field name="name" select="2"/>
+				<field name="debit"/>
+				<field name="credit"/>
+				
+			</tree>
+		</field>
+	</record>
+	<record model="ir.actions.act_window" id="action_annuel_tree">
+                <field name="name">Rapport Annnuel</field>
+                <field name="type">ir.actions.act_window</field>
+                <field name="res_model">compte.annuel</field>
+                <field name="view_type">tree</field>
+		<field name="view_mode">form,tree</field>
+        </record>
+	<menuitem name="Financial Management/report EVI" action="action_annuel_tree" id="menu_annuel_tree"/>
+</data>
+</terp>

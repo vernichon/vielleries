@@ -1,0 +1,460 @@
+<?xml version="1.0" encoding="utf-8"?>
+<terp>
+	<data>
+		<!--
+		Resource: res.partner.title
+		-->
+		<record id="res_partner_title_madam" model="res.partner.title">
+			<field name="domain">contact</field>
+			<field name="name">Madame</field>
+			<field name="shortcut">Ms.</field>
+		</record>
+		<record id="res_partner_title_miss" model="res.partner.title">
+			<field name="domain">contact</field>
+			<field name="name">Mademoiselle</field>
+			<field name="shortcut">Mss</field>
+		</record>
+		<record id="res_partner_title_sir" model="res.partner.title">
+			<field name="domain">contact</field>
+			<field name="name">Monsieur</field>
+			<field name="shortcut">M.</field>
+		</record>
+		<record id="res_partner_title_sarl" model="res.partner.title">
+			<field name="domain">partner</field>
+			<field name="name">S.A.R.L.</field>
+			<field name="shortcut">sarl</field>
+		</record>
+		<record id="res_partner_title_sa" model="res.partner.title">
+			<field name="domain">partner</field>
+			<field name="name">S.A.</field>
+			<field name="shortcut">sa</field>
+		</record>
+		<record id="res_partner_title_eurl" model="res.partner.title">
+			<field name="domain">partner</field>
+			<field name="name">E.U.R.L.</field>
+			<field name="shortcut">eurl</field>
+		</record>
+		<record id="res_partner_title_asso" model="res.partner.title">
+			<field name="domain">partner</field>
+			<field name="name">Association</field>
+			<field name="shortcut">asso</field>
+		</record>
+		<record id="res_partner_title_part" model="res.partner.title">
+			<field name="domain">partner</field>
+			<field name="name">Particulier</field>
+			<field name="shortcut">part</field>
+		</record>
+		<record id="res_partner_title_madame" model="res.partner.title">
+			<field name="domain">partner</field>
+			<field name="name">Madame</field>
+			<field name="shortcut">Ms.</field>
+		</record>
+		<record id="res_partner_title_mademoiselle" model="res.partner.title">
+			<field name="domain">partner</field>
+			<field name="name">Mademoiselle</field>
+			<field name="shortcut">Mss</field>
+		</record>
+		<record id="res_partner_title_monsieur" model="res.partner.title">
+			<field name="domain">partner</field>
+			<field name="name">Monsieur</field>
+			<field name="shortcut">M.</field>
+		</record>
+
+
+		<!--
+		Resource: res.partner.category
+		-->
+
+		<record id="res_partner_category_0" model="res.partner.category">
+			<field name="name">Client</field>
+		</record>
+		<record id="res_partner_category_1" model="res.partner.category">
+			<field name="name">Prospect</field>
+		</record>
+		<record id="res_partner_category_2" model="res.partner.category">
+			<field name="name">Fournisseur</field>
+		</record>
+		<record id="res_partner_category_3" model="res.partner.category">
+			<field name="name">Particulier</field>
+			<field name="parent_id" ref="res_partner_category_0"/>
+		</record> 
+		<record id="res_partner_category_4" model="res.partner.category">
+			<field name="name">Professionnels</field>
+			<field name="parent_id" ref="res_partner_category_0"/>
+		</record>
+		<record id="res_partner_category_5" model="res.partner.category">
+			<field name="name">Particulier</field>
+			<field name="parent_id" ref="res_partner_category_1"/>
+		</record>
+		<record id="res_partner_category_6" model="res.partner.category">
+			<field name="name">Professionnels</field>
+			<field name="parent_id" ref="res_partner_category_1"/>
+		</record> 
+		<record id="res_partner_function_0" model="res.partner.function">
+			<field name="name">Dirigeant</field>
+		</record> 
+		<record id="res_partner_function_1" model="res.partner.function">
+			<field name="name">Comptable</field>
+		</record> 
+		<record id="res_partner_function_2" model="res.partner.function">
+			<field name="name">Commercial</field>
+		</record> 
+		<record id="res_partner_function_3" model="res.partner.function">
+			<field name="name">Responsable Informatique</field>
+		</record> 
+		<record id="res_partner_function_4" model="res.partner.function">
+			<field name="name">Gérant</field>
+		</record> 
+		<record id="res_partner_function_5" model="res.partner.function">
+			<field name="name">Econome</field>
+		</record> 
+		<record id="res_partner_function_6" model="res.partner.function">
+			<field name="name">D.R.H.</field>
+		</record> 
+		<record id="res_partner_function_7" model="res.partner.function">
+			<field name="name">Assistante de Direction</field>
+		</record> 
+		<record id="res_partner_function_8" model="res.partner.function">
+			<field name="name">Responsable Achats</field>
+		</record> 
+		<record id="res_partner_function_9" model="res.partner.function">
+			<field name="name">Responsable Logistique</field>
+		</record> 
+
+	<record model="res.partner.canal" id="canal_1">
+		<field name="name">Site Internet</field>
+	</record>
+	<record model="res.partner.canal" id="canal_2">
+		<field name="name">Téléphone</field>
+	</record>
+	<record model="res.partner.canal" id="canal_3">
+		<field name="name">direct</field>
+	</record>
+	<record model="res.partner.canal" id="canal-4">
+		<field name="name">E-mail</field>
+	</record>
+
+	<record model="res.partner.som" id="som_0">
+		<field name="name">Furieux</field>
+		<field name="factor">1.0</field>
+	</record>
+	<record model="res.partner.som" id="som_1">
+		<field name="name">Mécontent</field>
+		<field name="factor">3.0</field>
+	</record>
+	<record model="res.partner.som" id="som_2">
+		<field name="name">Normal</field>
+		<field name="factor">5.0</field>
+	</record>
+	<record model="res.partner.som" id="som_3">
+		<field name="name">Content</field>
+		<field name="factor">7.0</field>
+	</record>
+	<record model="res.partner.som" id="som_4">
+		<field name="name">Trés content</field>
+		<field name="factor">8.5</field>
+	</record>
+<!--
+	Fiscal year
+	-->	
+
+	<record model="account.fiscalyear" id="data_fiscalyear">
+		<field name="name" eval="'Année Fiscale '+time.strftime('%Y')"/>
+		<field name="code" eval="'AF'+time.strftime('%Y')"/>
+		<field name="date_start" eval="time.strftime('%Y')+'-01-01'"/>
+		<field name="date_stop" eval="time.strftime('%Y')+'-12-31'"/>
+	</record>
+
+	<!--
+	Fiscal Periods
+	-->	
+
+	<record model="account.period" id="period_1">
+		<field name="name" eval="'Janvier '+time.strftime('%Y')"/>
+		<field name="fiscalyear_id" ref="data_fiscalyear"/>
+		<field name="date_start" eval="time.strftime('%Y')+'-01-01'"/>
+		<field name="date_stop" eval="time.strftime('%Y')+'-01-31'"/>
+	</record>
+	<record model="account.period" id="period_2">
+		<field name="name" eval="'Février '+time.strftime('%Y')"/>
+		<field name="fiscalyear_id" ref="data_fiscalyear"/>
+		<field name="date_start" eval="time.strftime('%Y')+'-02-01'"/>
+		<field name="date_stop" eval="time.strftime('%Y')+'-02-28'"/>
+	</record>
+	<record model="account.period" id="period_3">
+		<field name="name" eval="'Mars '+time.strftime('%Y')"/>
+		<field name="fiscalyear_id" ref="data_fiscalyear"/>
+		<field name="date_start" eval="time.strftime('%Y')+'-03-01'"/>
+		<field name="date_stop" eval="time.strftime('%Y')+'-03-31'"/>
+	</record>
+	<record model="account.period" id="period_4">
+		<field name="name" eval="'Avril '+time.strftime('%Y')"/>
+		<field name="fiscalyear_id" ref="data_fiscalyear"/>
+		<field name="date_start" eval="time.strftime('%Y')+'-04-01'"/>
+		<field name="date_stop" eval="time.strftime('%Y')+'-04-30'"/>
+	</record>
+	<record model="account.period" id="period_5">
+		<field name="name" eval="'Mai '+time.strftime('%Y')"/>
+		<field name="fiscalyear_id" ref="data_fiscalyear"/>
+		<field name="date_start" eval="time.strftime('%Y')+'-05-01'"/>
+		<field name="date_stop" eval="time.strftime('%Y')+'-05-31'"/>
+	</record>
+	<record model="account.period" id="period_6">
+		<field name="name" eval="'Juin '+time.strftime('%Y')"/>
+		<field name="fiscalyear_id" ref="data_fiscalyear"/>
+		<field name="date_start" eval="time.strftime('%Y')+'-06-01'"/>
+		<field name="date_stop" eval="time.strftime('%Y')+'-06-30'"/>
+	</record>
+	<record model="account.period" id="period_7">
+		<field name="name" eval="'Juillet '+time.strftime('%Y')"/>
+		<field name="fiscalyear_id" ref="data_fiscalyear"/>
+		<field name="date_start" eval="time.strftime('%Y')+'-07-01'"/>
+		<field name="date_stop" eval="time.strftime('%Y')+'-07-31'"/>
+	</record>
+	<record model="account.period" id="period_8">
+		<field name="name" eval="'Août '+time.strftime('%Y')"/>
+		<field name="fiscalyear_id" ref="data_fiscalyear"/>
+		<field name="date_start" eval="time.strftime('%Y')+'-08-01'"/>
+		<field name="date_stop" eval="time.strftime('%Y')+'-08-31'"/>
+	</record>
+	<record model="account.period" id="period_9">
+		<field name="name" eval="'Septembre '+time.strftime('%Y')"/>
+		<field name="fiscalyear_id" ref="data_fiscalyear"/>
+		<field name="date_start" eval="time.strftime('%Y')+'-09-01'"/>
+		<field name="date_stop" eval="time.strftime('%Y')+'-09-30'"/>
+	</record>
+	<record model="account.period" id="period_10">
+		<field name="name" eval="'Octobre '+time.strftime('%Y')"/>
+		<field name="fiscalyear_id" ref="data_fiscalyear"/>
+		<field name="date_start" eval="time.strftime('%Y')+'-10-01'"/>
+		<field name="date_stop" eval="time.strftime('%Y')+'-10-31'"/>
+	</record>
+	<record model="account.period" id="period_11">
+		<field name="name" eval="'Novembre '+time.strftime('%Y')"/>
+		<field name="fiscalyear_id" ref="data_fiscalyear"/>
+		<field name="date_start" eval="time.strftime('%Y')+'-11-01'"/>
+		<field name="date_stop" eval="time.strftime('%Y')+'-11-30'"/>
+	</record>
+	<record model="account.period" id="period_12">
+		<field name="name" eval="'Décembre '+time.strftime('%Y')"/>
+		<field name="fiscalyear_id" ref="data_fiscalyear"/>
+		<field name="date_start" eval="time.strftime('%Y')+'-12-01'"/>
+		<field name="date_stop" eval="time.strftime('%Y')+'-12-31'"/>
+	</record>
+
+<!--
+	TVA pour la déclaration fiscale
+	-->	
+	<record model="account.tax.code" id="account.account_tax_coll">
+		<field name="name">TVA collectée</field>
+		<field name="code">TVAcol</field>
+		<field name="sign">1.00</field>
+        </record> 
+	<record model="account.tax.code" id="account.account_tax_coll_196">
+		<field name="name">TVA 19.6 collectée</field>
+		<field name="code">TVA19.6col</field>
+		<field name="parent_id" ref="account.account_tax_coll"/>
+		<field name="sign">1.00</field>
+	</record>
+	<record model="account.tax.code" id="account.account_tax_coll_85">
+		<field name="name">TVA 8.5 collectée</field>
+		<field name="code">TVA8.5col</field>
+		<field name="parent_id" ref="account.account_tax_coll"/>
+		<field name="sign">1.00</field>
+	</record>
+	<record model="account.tax.code" id="account.account_tax_coll_55">
+		<field name="name">TVA 5.5 collectée</field>
+		<field name="code">TVA5.5col</field>
+		<field name="parent_id" ref="account.account_tax_coll"/>
+		<field name="sign">1.00</field>
+	</record>
+	<record model="account.tax.code" id="account.account_tax_coll_21">
+		<field name="name">TVA 2.1 collectée</field>
+		<field name="code">TVA2.1col</field>
+		<field name="parent_id" ref="account.account_tax_coll"/>
+		<field name="sign">1.00</field>
+	</record>
+	<record model="account.tax.code" id="account.account_tax_acqu">
+		<field name="name">TVA acquittée</field>
+		<field name="code">TVAacqu</field>
+		<field name="sign">1.00</field>
+        </record> 
+	<record model="account.tax.code" id="account.account_tax_acqu_196">
+		<field name="name">TVA 19.6 acquittée</field>
+		<field name="code">TVA19.6acq</field>
+		<field name="parent_id" ref="account.account_tax_acqu"/>
+		<field name="sign">1.00</field>
+	</record>
+	<record model="account.tax.code" id="account.account_tax_acqu_85">
+		<field name="name">TVA 8.5 acquittée</field>
+		<field name="code">TVA8.5acq</field>
+		<field name="parent_id" ref="account.account_tax_acqu"/>
+		<field name="sign">1.00</field>
+	</record>
+	<record model="account.tax.code" id="account.account_tax_acqu_55">
+		<field name="name">TVA 5.5 acquittée</field>
+		<field name="code">TVA5.5acq</field>
+		<field name="parent_id" ref="account.account_tax_acqu"/>
+		<field name="sign">1.00</field>
+	</record>
+	<record model="account.tax.code" id="account.account_tax_acqu_21">
+		<field name="name">TVA 2.1 acquittée</field>
+		<field name="code">TVA2.1acq</field>
+		<field name="parent_id" ref="account.account_tax_acqu"/>
+		<field name="sign">1.00</field>
+	</record>	
+	<record model="account.tax.code" id="account.account_tax_immo">
+		<field name="name">TVA acquittée pour immo</field>
+		<field name="code">TVAacqimmo</field>
+		<field name="sign">1.00</field>
+        </record> 
+	<record model="account.tax.code" id="account.account_tax_immo_196">
+		<field name="name">TVA 19.6 acquittée pour immo</field>
+		<field name="code">TVA19.6acqimmo</field>
+		<field name="parent_id" ref="account.account_tax_immo"/>
+		<field name="sign">1.00</field>
+	</record>
+	<record model="account.tax.code" id="account.account_tax_immo_85">
+		<field name="name">TVA 8.5 acquittée pour immo</field>
+		<field name="code">TVA8.5acqimmo</field>
+		<field name="parent_id" ref="account.account_tax_immo"/>
+		<field name="sign">1.00</field>
+	</record>
+	<record model="account.tax.code" id="account.account_tax_immo_55">
+		<field name="name">TVA 5.5 acquittée pour immo</field>
+		<field name="code">TVA5.5acqimmo</field>
+		<field name="parent_id" ref="account.account_tax_immo"/>
+		<field name="sign">1.00</field>
+	</record>
+	<record model="account.tax.code" id="account.account_tax_immo_21">
+		<field name="name">TVA 2.1 acquittée pour immo</field>
+		<field name="code">TVA2.1acqimmo</field>
+		<field name="parent_id" ref="account.account_tax_immo"/>
+		<field name="sign">1.00</field>
+	</record>	
+	<!--
+	TVA
+	-->	
+
+	<record model="account.tax" id="l10n_fr.tva_normale">
+            <field name="name">TVA 19,6%</field>
+            <field name="amount" eval="0.196"/>
+            <field name="type">percent</field>
+            <field name="account_collected_id" ref="l10n_fr.pcg_445710"/>
+            <field name="account_paid_id" ref="l10n_fr.pcg_445510"/>
+	    <field name="base_code_id" ref="account.account_tax_coll_196"/>
+	    <field name="tax_code_id" ref="account.account_tax_coll_196"/>
+        </record>
+
+         <record model="account.tax" id="l10n_fr.tva_specifique">
+            <field name="name">TVA 8,5%</field>
+            <field name="amount" eval="0.085"/>
+            <field name="type">percent</field>
+            <field name="account_collected_id" ref="l10n_fr.pcg_445710"/>
+            <field name="account_paid_id" ref="l10n_fr.pcg_445510"/>
+	    <field name="base_code_id" ref="account.account_tax_coll_85"/>
+	    <field name="tax_code_id" ref="account.account_tax_coll_85"/>
+
+        </record>
+
+        <record model="account.tax" id="l10n_fr.tva_reduite">
+            <field name="name">TVA 5,5%</field>
+            <field name="amount" eval="0.055"/>
+            <field name="type">percent</field>
+            <field name="account_collected_id" ref="l10n_fr.pcg_445710"/>
+            <field name="account_paid_id" ref="l10n_fr.pcg_445510"/>
+	    <field name="base_code_id" ref="account.account_tax_coll_55"/>
+	    <field name="tax_code_id" ref="account.account_tax_coll_55"/>
+        </record>
+
+        <record model="account.tax" id="l10n_fr.tva_super_reduite">
+            <field name="name">TVA 2,1%</field>
+            <field name="amount" eval="0.021"/>
+            <field name="type">percent</field>
+            <field name="account_collected_id" ref="l10n_fr.pcg_445710"/>
+            <field name="account_paid_id" ref="l10n_fr.pcg_445510"/>
+	    <field name="base_code_id" ref="account.account_tax_coll_21"/>
+	    <field name="tax_code_id" ref="account.account_tax_coll_21"/>
+        </record> 
+	<record model="account.tax" id="l10n_fr.tva_immo_normale">
+	    <field name="name">TVA Immo-19,6%</field>
+	    <field name="amount" eval="0.196"/>
+	    <field name="type">percent</field>
+	    <field name="account_collected_id" ref="l10n_fr.pcg_445620"/>
+	    <field name="account_paid_id" ref="l10n_fr.pcg_445510"/>
+	    <field name="base_code_id" ref="account.account_tax_immo_196"/>
+	    <field name="tax_code_id" ref="account.account_tax_immo_196"/>
+	</record>
+
+	<record model="account.tax" id="l10n_fr.tva_immo_specifique">
+		<field name="name">TVA Immo-8,5%</field>
+		<field name="amount" eval="0.085"/>
+		<field name="type">percent</field>
+		<field name="account_collected_id" ref="l10n_fr.pcg_445620"/>
+		<field name="account_paid_id" ref="l10n_fr.pcg_445510"/>
+	    <field name="base_code_id" ref="account.account_tax_immo_85"/>
+	    <field name="tax_code_id" ref="account.account_tax_immo_85"/>
+	</record>
+
+	<record model="account.tax" id="l10n_fr.tva_immo_reduite">
+		<field name="name">TVA Immo-5,5%</field>
+		<field name="amount" eval="0.055"/>
+		<field name="type">percent</field>
+		<field name="account_collected_id" ref="l10n_fr.pcg_445620"/>
+		<field name="account_paid_id" ref="l10n_fr.pcg_445510"/>
+	    <field name="base_code_id" ref="account.account_tax_immo_55"/>
+	    <field name="tax_code_id" ref="account.account_tax_immo_55"/>
+	</record>
+
+	<record model="account.tax" id="l10n_fr.tva_immo_super_reduite">
+		<field name="name">TVA Immo-2,1%</field>
+		<field name="amount" eval="0.021"/>
+		<field name="type">percent</field>
+		<field name="account_collected_id" ref="l10n_fr.pcg_445620"/>
+		<field name="account_paid_id" ref="l10n_fr.pcg_445510"/>
+	    <field name="base_code_id" ref="account.account_tax_immo_21"/>
+	    <field name="tax_code_id" ref="account.account_tax_immo_21"/>
+	</record>
+		
+	<record model="account.tax" id="l10n_fr.tva_acq_normale">
+            <field name="name">TVA acquité 19,6%</field>
+            <field name="amount" eval="0.196"/>
+            <field name="type">percent</field>
+            <field name="account_collected_id" ref="l10n_fr.pcg_445660"/>
+            <field name="account_paid_id" ref="l10n_fr.pcg_445710"/>
+	    <field name="base_code_id" ref="account.account_tax_acqu_196"/>
+	    <field name="tax_code_id" ref="account.account_tax_acqu_196"/>
+        </record>
+
+         <record model="account.tax" id="l10n_fr.tva_acq_specifique">
+            <field name="name">TVA acquité 8,5%</field>
+            <field name="amount" eval="0.085"/>
+            <field name="type">percent</field>
+            <field name="account_collected_id" ref="l10n_fr.pcg_445660"/>
+            <field name="account_paid_id" ref="l10n_fr.pcg_445710"/>
+	    <field name="base_code_id" ref="account.account_tax_acqu_85"/>
+	    <field name="tax_code_id" ref="account.account_tax_acqu_85"/>
+        </record>
+
+        <record model="account.tax" id="l10n_fr.tva_acq_reduite">
+            <field name="name">TVA acquité 5,5%</field>
+            <field name="amount" eval="0.055"/>
+            <field name="type">percent</field>
+            <field name="account_collected_id" ref="l10n_fr.pcg_445660"/>
+            <field name="account_paid_id" ref="l10n_fr.pcg_445710"/>
+	    <field name="base_code_id" ref="account.account_tax_acqu_55"/>
+	    <field name="tax_code_id" ref="account.account_tax_acqu_55"/>
+        </record>
+
+        <record model="account.tax" id="l10n_fr.tva_acq_super_reduite">
+            <field name="name">TVA acquité 2,1%</field>
+            <field name="amount" eval="0.021"/>
+            <field name="type">percent</field>
+            <field name="account_collected_id" ref="l10n_fr.pcg_445660"/>
+            <field name="account_paid_id" ref="l10n_fr.pcg_445710"/>
+	    <field name="base_code_id" ref="account.account_tax_acqu_21"/>
+	    <field name="tax_code_id" ref="account.account_tax_acqu_21"/>
+        </record> 
+
+</data>
+</terp>

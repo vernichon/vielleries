@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<terp>
+	<data>
+           <report id="saintjoseph_factures"
+            string="Liste factures"
+            model="account.invoice"
+            name="sainjoseph.factures"
+            rml="saintjoseph/report/factures.rml"
+             auto="True"/>
+          
+    	  <wizard  id="wizard_saintjoseph_factures_report"
+                string="Etat Facturation" 
+                model="account.invoice"
+               name="saintjoseph.factures.report"
+                keyword="client_print_multi"
+          />
+           
+           <report id="saintjoseph_comptes"
+            string="Liste comptes"
+            model="account.account"
+            name="sainjoseph.comptes"
+            rml="saintjoseph/report/comptes.rml"
+             auto="True"/>
+          
+    	  <wizard  id="wizard_saintjoseph_comptes_report"
+                string="Liste comptes" 
+                model="account.account"
+               name="saintjoseph.comptes.report"
+                keyword="client_print_multi"
+          />
+	    <report id="saintjoseph_ecritures"
+            string="Liste ecritures"
+            model="account.move.line"
+            name="sainjoseph.ecritures"
+            rml="saintjoseph/report/ecritures.rml"
+             auto="True"/>
+          
+	    <wizard  id="wizard_saintjoseph_ecritures_report"
+                string="Liste ecritures" 
+                model="account.move.line"
+               name="saintjoseph.ecritures.report"
+                keyword="client_print_multi"
+          />
+
+	</data>
+</terp>

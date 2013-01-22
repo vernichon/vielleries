@@ -1,0 +1,78 @@
+<?xml version="1.0"?>
+<terp>
+<data>
+	-<record model="ir.ui.view" id="view_line_form">
+		<field name="name">lines.form</field>
+		<field name="model">report.account.fr.lignes</field>
+		<field name="type">tree</field>
+		<field name="arch" type="xml">
+			<tree string="Lignes">
+				<field name="name" select="1" />
+				<field name="numero" select="1" />
+				<field name="designation" select="1" />
+				<field name="debit" sum="Total debit" select="1" />
+				<field name="credit" sum="Total Credit" select="1" />
+				<field name="annee" select="1" />
+				<field name="mois" select="1" />
+			</tree>
+		</field>
+	</record>
+	<record model="ir.actions.act_window" id="action_lignes_tree">
+                <field name="name">Lignes</field>
+                <field name="type">ir.actions.act_window</field>
+                <field name="res_model">report.account.fr.lignes</field>
+                <field name="view_type">tree</field>
+    </record>
+
+	<menuitem name="Financial Management/Documents de Synthèse France/Lignes" action="action_lignes_tree" id="menu_lignes"/>-->
+	-<record model="ir.ui.view" id="view_bilan_form">
+		<field name="name">parametres.form</field>
+		<field name="model">report.account.fr.parametres</field>
+		<field name="type">form</field>
+		<field name="arch" type="xml">
+			<form string="Compte Annuel">
+				<field name="name" select="1" />
+				<field name="report" select="1" />
+				<field name="definition" select="2"/>
+				<field name="exceptions" select="2"/>
+				<field name="type" select="2"/>
+				<field name="valeur" select="2"/>
+				<field name="somme" select="2"/>
+				
+			</form>
+		</field>
+	</record>
+<record model="ir.ui.view" id="view_bilan_tree">
+		<field name="name">parametres.tree</field>
+		<field name="model">report.account.fr.parametres</field>
+		<field name="type">tree</field>
+		<field name="arch" type="xml">
+			<tree string="Compte Annuel" editable="bottom">
+				<field name="name" select="1" />
+				<field name="report" select="1" />
+				<field name="definition" select="2"/>
+				<field name="exceptions" select="2"/>
+				<field name="type" select="2"/>
+				<field name="valeur" select="2"/>
+				<field name="somme" select="2"/>
+			</tree>
+		</field>
+	</record>
+	<record model="ir.actions.act_window" id="action_bilan_tree">
+                <field name="name">parametres</field>
+                <field name="type">ir.actions.act_window</field>
+                <field name="res_model">report.account.fr.parametres</field>
+                <field name="view_type">form</field>
+		<field name="view_mode">form,tree</field>
+        </record>-->
+	<menuitem name="Financial Management/Documents de Synthèse France/Configuration/parametres" action="action_bilan_tree" id="menu_conf_bilan"/>-->
+        <menuitem name="Financial Management/Documents de Synthèse France" />
+        <menuitem name="Financial Management/Documents de Synthèse France/Compte de resultat" id="menu_action_resultat" action="wizard_report_account_fr_resultat_report" type="wizard" icon="STOCK_PRINT" />
+       <menuitem name="Financial Management/Documents de Synthèse France" />
+        <menuitem name="Financial Management/Documents de Synthèse France/Bilan" id="menu_action_bilan" action="wizard_report_account_fr_bilan_report" type="wizard" icon="STOCK_PRINT" />
+        <menuitem name="Financial Management/Documents de Synthèse France/Balance" id="menu_action_balance" action="wizard_report_account_fr_balance_report" type="wizard" icon="STOCK_PRINT" />
+        <menuitem name="Financial Management/Documents de Synthèse France/Balance Clients" id="menu_action_balanceclients" action="wizard_report_account_fr_balanceclients_report" type="wizard" icon="STOCK_PRINT"/>
+        <menuitem name="Financial Management/Documents de Synthèse France/Balance Fournisseurs" id="menu_action_balancefournisseurs" action="wizard_report_account_fr_balancefournisseurs_report" icon="STOCK_PRINT" type="wizard" />          
+        <menuitem name="Financial Management/Documents de Synthèse France/Grand Livre" id="menu_action_grandlivre" action="wizard_report_account_fr_grandlivre_report" icon="STOCK_PRINT" type="wizard" />          
+</data>
+</terp>

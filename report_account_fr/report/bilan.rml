@@ -1,0 +1,1216 @@
+<?xml version="1.0"?>
+<document filename="test.pdf">
+  <template pageSize="(595.0,842.0)" title="Test" author="Martin Simon" allowSplitting="20">
+    <pageTemplate id="first">
+      <frame id="first" x1="57.0" y1="28.0" width="481" height="786"/>
+    </pageTemplate>
+  </template>
+  <stylesheet>
+    <blockTableStyle id="Standard_Outline">
+      <blockAlignment value="LEFT"/>
+      <blockValign value="TOP"/>
+    </blockTableStyle>
+    <blockTableStyle id="Table1">
+      <blockAlignment value="LEFT"/>
+      <blockValign value="TOP"/>
+    </blockTableStyle>
+    <blockTableStyle id="Table2">
+      <blockAlignment value="LEFT"/>
+      <blockValign value="TOP"/>
+      <lineStyle kind="GRID" colorName="black"/>
+    </blockTableStyle>
+    <blockTableStyle id="Table3">
+      <blockAlignment value="LEFT"/>
+      <blockValign value="TOP"/>
+      <lineStyle kind="GRID" colorName="black"/>
+    </blockTableStyle>
+    <blockTableStyle id="Tableau1">
+      <blockAlignment value="LEFT"/>
+      <blockValign value="TOP"/>
+    </blockTableStyle>
+    <blockTableStyle id="Tableau2">
+      <blockAlignment value="LEFT"/>
+      <blockValign value="TOP"/>
+      <lineStyle kind="GRID" colorName="black"/>
+    </blockTableStyle>
+    <blockTableStyle id="Tableau3">
+      <blockAlignment value="LEFT"/>
+      <blockValign value="TOP"/>
+      <lineStyle kind="GRID" colorName="black"/>
+    </blockTableStyle>
+    <initialize>
+      <paraStyle name="all" alignment="justify"/>
+    </initialize>
+    <paraStyle name="P1" fontName="Times-Roman" fontSize="18.0" leading="22" alignment="CENTER" spaceBefore="0.0" spaceAfter="6.0"/>
+    <paraStyle name="P2" fontName="Times-Roman" fontSize="6.0" leading="8" spaceBefore="0.0" spaceAfter="6.0"/>
+    <paraStyle name="P3" fontName="Times-Roman" fontSize="6.0" leading="8" alignment="RIGHT" spaceBefore="0.0" spaceAfter="6.0"/>
+    <paraStyle name="P4" fontName="Times-Roman" fontSize="6.0" leading="8" alignment="RIGHT" spaceBefore="0.0" spaceAfter="6.0"/>
+    <paraStyle name="P5" fontName="Times-Roman" fontSize="8.0" leading="10" spaceBefore="0.0" spaceAfter="6.0"/>
+    <paraStyle name="P6" fontName="Times-Bold" fontSize="12.0" leading="15" alignment="CENTER" spaceBefore="0.0" spaceAfter="6.0"/>
+    <paraStyle name="P7" fontName="Times-Bold" fontSize="10.0" leading="13" alignment="CENTER" spaceBefore="0.0" spaceAfter="6.0"/>
+    <paraStyle name="P8" fontName="Times-Roman" fontSize="6.0" leading="8" alignment="RIGHT" spaceBefore="0.0" spaceAfter="6.0"/>
+    <paraStyle name="P9" fontName="Times-Roman" fontSize="6.0" leading="8" alignment="RIGHT" spaceBefore="0.0" spaceAfter="6.0"/>
+    <paraStyle name="P10" rightIndent="2.0" leftIndent="-0.0" fontName="Times-Roman" fontSize="6.0" leading="8" alignment="LEFT" spaceBefore="0.0" spaceAfter="6.0"/>
+    <paraStyle name="P11" rightIndent="2.0" leftIndent="-0.0" fontName="Times-Roman" fontSize="6.0" leading="8" alignment="RIGHT" spaceBefore="0.0" spaceAfter="6.0"/>
+    <paraStyle name="P12" rightIndent="2.0" leftIndent="-0.0" fontName="Times-Bold" fontSize="6.0" leading="8" alignment="LEFT" spaceBefore="0.0" spaceAfter="6.0"/>
+    <paraStyle name="P13" rightIndent="2.0" leftIndent="-0.0" fontName="Times-Bold" fontSize="6.0" leading="8" alignment="RIGHT" spaceBefore="0.0" spaceAfter="6.0"/>
+    <paraStyle name="P14" rightIndent="2.0" leftIndent="-0.0" fontName="Times-Bold" fontSize="6.0" leading="8" alignment="CENTER" spaceBefore="0.0" spaceAfter="6.0"/>
+    <paraStyle name="P15" rightIndent="2.0" leftIndent="-0.0" fontName="Times-Bold" fontSize="6.0" leading="8" alignment="CENTER" spaceBefore="0.0" spaceAfter="6.0"/>
+    <paraStyle name="P16" rightIndent="-1.0" leftIndent="-0.0" fontName="Times-Roman" fontSize="6.0" leading="8" alignment="RIGHT" spaceBefore="0.0" spaceAfter="6.0"/>
+    <paraStyle name="P17" rightIndent="-1.0" leftIndent="-0.0" fontName="Times-Roman" fontSize="6.0" leading="8" alignment="RIGHT" spaceBefore="0.0" spaceAfter="6.0"/>
+    <paraStyle name="P18" rightIndent="1.0" leftIndent="-0.0" fontName="Times-Bold" fontSize="6.0" leading="8" alignment="RIGHT"/>
+    <paraStyle name="P19" rightIndent="1.0" leftIndent="-0.0" fontName="Times-Bold" fontSize="6.0" leading="8" alignment="RIGHT" spaceBefore="0.0" spaceAfter="6.0"/>
+    <paraStyle name="P20" fontName="Times-Roman" fontSize="18.0" leading="22" alignment="CENTER"/>
+    <paraStyle name="P21" fontName="Times-Roman" fontSize="11.0" leading="14"/>
+    <paraStyle name="P22" fontName="Times-Roman" fontSize="6.0" leading="8" alignment="RIGHT"/>
+    <paraStyle name="P23" fontName="Times-Roman" fontSize="6.0" leading="8" alignment="RIGHT"/>
+    <paraStyle name="P24" rightIndent="17.0" leftIndent="0.0" fontName="Times-Roman" fontSize="6.0" leading="8" alignment="LEFT" spaceBefore="0.0" spaceAfter="6.0"/>
+    <paraStyle name="P25" rightIndent="17.0" leftIndent="0.0" fontName="Times-Roman" fontSize="6.0" leading="8" alignment="LEFT" spaceBefore="0.0" spaceAfter="6.0"/>
+    <paraStyle name="P26" rightIndent="17.0" leftIndent="0.0" fontName="Times-Bold" fontSize="6.0" leading="8" alignment="LEFT" spaceBefore="0.0" spaceAfter="6.0"/>
+    <paraStyle name="P27" rightIndent="17.0" leftIndent="0.0" fontName="Times-Bold" fontSize="6.0" leading="8" alignment="CENTER" spaceBefore="0.0" spaceAfter="6.0"/>
+    <paraStyle name="P28" rightIndent="17.0" leftIndent="0.0" fontName="Times-Roman" fontSize="6.0" leading="8" alignment="LEFT"/>
+    <paraStyle name="P29" rightIndent="17.0" leftIndent="0.0" fontName="Times-Bold" fontSize="6.0" leading="8" alignment="LEFT"/>
+    <paraStyle name="P30" rightIndent="17.0" leftIndent="0.0" fontName="Times-Bold" fontSize="6.0" leading="8" alignment="CENTER"/>
+    <paraStyle name="P31" rightIndent="17.0" leftIndent="0.0" fontName="Times-Roman" fontSize="6.0" leading="8" alignment="LEFT"/>
+    <paraStyle name="P32" rightIndent="17.0" leftIndent="-0.0" fontName="Times-Roman" fontSize="6.0" leading="8" alignment="LEFT" spaceBefore="0.0" spaceAfter="6.0"/>
+    <paraStyle name="P33" rightIndent="17.0" leftIndent="-0.0" fontName="Times-Bold" fontSize="6.0" leading="8" alignment="LEFT" spaceBefore="0.0" spaceAfter="6.0"/>
+    <paraStyle name="P34" rightIndent="17.0" leftIndent="-0.0" fontName="Times-Bold" fontSize="6.0" leading="8" alignment="LEFT"/>
+    <paraStyle name="P35" rightIndent="-0.0" leftIndent="-0.0" fontName="Times-Bold" fontSize="6.0" leading="8" alignment="RIGHT" spaceBefore="0.0" spaceAfter="6.0"/>
+    <paraStyle name="P36" rightIndent="0.0" leftIndent="0.0" fontName="Times-Bold" fontSize="6.0" leading="8" alignment="RIGHT"/>
+    <paraStyle name="P37" rightIndent="5.0" leftIndent="-0.0" fontName="Times-Roman" fontSize="6.0" leading="8" alignment="RIGHT" spaceBefore="0.0" spaceAfter="6.0"/>
+    <paraStyle name="Standard" fontName="Times-Roman"/>
+    <paraStyle name="Text body" fontName="Times-Roman" spaceBefore="0.0" spaceAfter="6.0"/>
+    <paraStyle name="List" fontName="Times-Roman" spaceBefore="0.0" spaceAfter="6.0"/>
+    <paraStyle name="Table Contents" fontName="Times-Roman" spaceBefore="0.0" spaceAfter="6.0"/>
+    <paraStyle name="Table Heading" fontName="Times-Roman" alignment="CENTER" spaceBefore="0.0" spaceAfter="6.0"/>
+    <paraStyle name="Caption" fontName="Times-Roman" fontSize="10.0" leading="13" spaceBefore="6.0" spaceAfter="6.0"/>
+    <paraStyle name="Index" fontName="Times-Roman"/>
+    <paraStyle name="Bloc de tableau" fontName="Times-Roman" fontSize="6.0" leading="8" spaceBefore="0.0" spaceAfter="6.0"/>
+  </stylesheet>
+  <story>
+    <para style="P1">Bilan [[ company.name ]]</para>
+    <blockTable colWidths="482.0" repeatRows="1" style="Table1">
+      <tr>
+        <td>
+          <para style="P5">au : 31/12/ [[ annee(data['form']) ]] Imprimé le : [[ time.strftime('%Y-%m-%d') ]] at [[ time.strftime('%H:%M:%S') ]] [[ chargement(data['form']) ]]</para>
+          <para style="P5">[[ resultat.chargement(data['form']) ]] </para>
+          <para style="P5">[[ set_variable('resultatbilan', (-totalactif-totalactifamo)-(ptc1+ptc2+ptc3+ptc4+ptc5)) ]]</para>
+          <para style="P5">[[ set_variable('resultatcr', (resultat.localcontext['totalproduits'] + resultat.localcontext['totalcharges']))]]</para>
+        </td>
+      </tr>
+    </blockTable>
+    <blockTable colWidths="482.0" repeatRows="1" style="Table2">
+      <tr>
+        <td>
+          <para style="P6">ACTIF</para>
+        </td>
+      </tr>
+    </blockTable>
+    <para style="P7">Actif Immobilisé</para>
+    <section>
+      <blockTable colWidths="200.0,112.0,97.0,73.0" style="Table3">
+        <tr>
+          <td>
+            <para style="P10">
+              <font color="white"> </font>
+            </para>
+          </td>
+          <td>
+            <para style="P16">BRUT</para>
+          </td>
+          <td>
+            <para style="P16">AMORTISSEMENTS ET DÉPRÉCIATIONS</para>
+          </td>
+          <td>
+            <para style="P16">NET</para>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <para style="P10">CAPITAL SOUSCRIT NON APPELÉ</para>
+          </td>
+          <td>
+            <para style="P16">[[ -ca ]] </para>
+          </td>
+          <td>
+            <para style="P16">
+              <font color="white"> </font>
+            </para>
+          </td>
+          <td>
+            <para style="P17">[[ -ca ]]</para>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <para style="P12">IMMOBILISATIONS INCORPORELLES</para>
+          </td>
+          <td>
+            <para style="P8">
+              <font color="white"> </font>
+            </para>
+          </td>
+          <td>
+            <para style="P8">
+              <font color="white"> </font>
+            </para>
+          </td>
+          <td>
+            <para style="P8">
+              <font color="white"> </font>
+            </para>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <para style="P2">FRAIS D'ÉTABLISSEMENT</para>
+          </td>
+          <td>
+            <para style="P3">[[ -cb ]] </para>
+          </td>
+          <td>
+            <para style="P3">[[ aca ]] </para>
+          </td>
+          <td>
+            <para style="P8">[[ -cb -aca ]]</para>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <para style="P2">FRAIS DE RECHERCHE ET DE DÉVELOPPEMENT</para>
+          </td>
+          <td>
+            <para style="P3">[[-cc ]] </para>
+          </td>
+          <td>
+            <para style="P3">[[ acb ]] </para>
+          </td>
+          <td>
+            <para style="P8">[[-cc- acb ]]</para>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <para style="P2">CONCESSIONS , BREVETS ET DROITS SIMILAIRES</para>
+          </td>
+          <td>
+            <para style="P3">[[ -cd ]]</para>
+          </td>
+          <td>
+            <para style="P3">[[ acc ]]</para>
+          </td>
+          <td>
+            <para style="P8">[[ -cd-acc ]]</para>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <para style="P2">FONDS COMMERCIAL (1) </para>
+          </td>
+          <td>
+            <para style="P3">[[ -ce ]] </para>
+          </td>
+          <td>
+            <para style="P3">[[ acd ]] </para>
+          </td>
+          <td>
+            <para style="P8">[[-ce-acd ]]</para>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <para style="P2">AUTRES IMMOBILISATIONS INCORPORELLES</para>
+          </td>
+          <td>
+            <para style="P3">[[ -cf ]]</para>
+          </td>
+          <td>
+            <para style="P3">[[ace ]]</para>
+          </td>
+          <td>
+            <para style="P8">[[ -cf-ace ]]</para>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <para style="P2">IMMOBILISATIONS INCORPORELLES EN COURS</para>
+          </td>
+          <td>
+            <para style="P3">[[ -cg ]]</para>
+          </td>
+          <td>
+            <para style="P8">[[ acf ]]</para>
+          </td>
+          <td>
+            <para style="P8">[[ -cg- acf ]]</para>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <para style="P2">AVANCES ET ACOMPTES / IMMOB. INCORPORELLES</para>
+          </td>
+          <td>
+            <para style="P3">[[ -ch ]] </para>
+          </td>
+          <td>
+            <para style="P3">
+              <font color="white"> </font>
+            </para>
+          </td>
+          <td>
+            <para style="P17">[[ -ch ]]</para>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <para style="P12">IMMOBILISATIONS CORPORELLES</para>
+          </td>
+          <td>
+            <para style="P8">
+              <font color="white"> </font>
+            </para>
+          </td>
+          <td>
+            <para style="P8">
+              <font color="white"> </font>
+            </para>
+          </td>
+          <td>
+            <para style="P8">
+              <font color="white"> </font>
+            </para>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <para style="P10">TERRAINS</para>
+          </td>
+          <td>
+            <para style="P8">[[ -ci ]]</para>
+          </td>
+          <td>
+            <para style="P8">[[-acg ]]</para>
+          </td>
+          <td>
+            <para style="P8">[[ -ci- acg ]]</para>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <para style="P10">CONSTRUCTIONS</para>
+          </td>
+          <td>
+            <para style="P8">[[ -cj ]]</para>
+          </td>
+          <td>
+            <para style="P8">[[ ach ]]</para>
+          </td>
+          <td>
+            <para style="P8">[[ -cj- ach ]]</para>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <para style="P10">INSTALLATIONS TECHNIQUES,MATERIEL,OUTILLAGE</para>
+          </td>
+          <td>
+            <para style="P8">[[ -ck ]]</para>
+          </td>
+          <td>
+            <para style="P8">[[ aci ]]</para>
+          </td>
+          <td>
+            <para style="P8">[[ -ck-aci ]]</para>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <para style="P10">AUTRES </para>
+          </td>
+          <td>
+            <para style="P8">[[ -cl ]]</para>
+          </td>
+          <td>
+            <para style="P8">[[ acj ]]</para>
+          </td>
+          <td>
+            <para style="P8">[[ -cl-acj ]]</para>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <para style="P10">IMMOBILISATIONS CORPORELLES EN COURS</para>
+          </td>
+          <td>
+            <para style="P8">[[ -cm ]] </para>
+          </td>
+          <td>
+            <para style="P8">[[ ack ]]</para>
+          </td>
+          <td>
+            <para style="P8">[[ -cm- ack ]]</para>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <para style="P10">AVANCES ET ACOMPTES / IMMOB. CORPORELLES</para>
+          </td>
+          <td>
+            <para style="P8">[[ -cn ]] </para>
+          </td>
+          <td>
+            <para style="P8">
+              <font color="white"> </font>
+            </para>
+          </td>
+          <td>
+            <para style="P17">[[ -cn ]]</para>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <para style="P12">IMMOBILISATIONS FINANCIÉRES</para>
+          </td>
+          <td>
+            <para style="P8">
+              <font color="white"> </font>
+            </para>
+          </td>
+          <td>
+            <para style="P8">
+              <font color="white"> </font>
+            </para>
+          </td>
+          <td>
+            <para style="P8">
+              <font color="white"> </font>
+            </para>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <para style="P10">PARTICIPATIONS</para>
+          </td>
+          <td>
+            <para style="P8">[[ -co ]]</para>
+          </td>
+          <td>
+            <para style="P8">[[ acl ]]</para>
+          </td>
+          <td>
+            <para style="P17">[[ -co-acl ]]</para>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <para style="P10">CREANCES RATTACHEES A DES PARTICIPATIONS</para>
+          </td>
+          <td>
+            <para style="P8">[[ -cp ]]</para>
+          </td>
+          <td>
+            <para style="P8">[[ acm ]]</para>
+          </td>
+          <td>
+            <para style="P8">[[ -cp-acm ]]</para>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <para style="P10">TITRES IMMOBILISÉS DE L'ACTIVITÉ DE PORTEFEUILLE</para>
+          </td>
+          <td>
+            <para style="P8">[[ -cq ]]</para>
+          </td>
+          <td>
+            <para style="P8">[[ acn ]]</para>
+          </td>
+          <td>
+            <para style="P8">[[ -cq- acn ]]</para>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <para style="P10">AUTRES TITRES IMMOBILISÉS</para>
+          </td>
+          <td>
+            <para style="P8">[[ -cr ]]</para>
+          </td>
+          <td>
+            <para style="P8">[[ aco ]]</para>
+          </td>
+          <td>
+            <para style="P8">[[ -cr-aco ]]</para>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <para style="P10">PRÊTS</para>
+          </td>
+          <td>
+            <para style="P8">[[ -cs ]]</para>
+          </td>
+          <td>
+            <para style="P8">[[ acp ]]</para>
+          </td>
+          <td>
+            <para style="P8">[[ -cs-acp ]]</para>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <para style="P10">AUTRES</para>
+          </td>
+          <td>
+            <para style="P8">[[ -ct ]]</para>
+          </td>
+          <td>
+            <para style="P8">[[ acq ]]</para>
+          </td>
+          <td>
+            <para style="P8">[[ -ct- acq ]]</para>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <para style="P13">TOTAL 1</para>
+          </td>
+          <td>
+            <para style="P8">[[-tc1 ]]</para>
+          </td>
+          <td>
+            <para style="P8">[[ atc1 ]]</para>
+          </td>
+          <td>
+            <para style="P8">[[ -tc1 - atc1 ]]</para>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <para style="P10">
+              <font color="white"> </font>
+            </para>
+          </td>
+          <td>
+            <para style="P8">
+              <font color="white"> </font>
+            </para>
+          </td>
+          <td>
+            <para style="P8">
+              <font color="white"> </font>
+            </para>
+          </td>
+          <td>
+            <para style="P8">
+              <font color="white"> </font>
+            </para>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <para style="P15">ACTIF CIRCULANT</para>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <para style="P12">STOCK EN COURS</para>
+          </td>
+          <td>
+            <para style="P8">
+              <font color="white"> </font>
+            </para>
+          </td>
+          <td>
+            <para style="P8">
+              <font color="white"> </font>
+            </para>
+          </td>
+          <td>
+            <para style="P8">
+              <font color="white"> </font>
+            </para>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <para style="P10">MATIERES PREMIERES , APPROVISIONNEMENTS</para>
+          </td>
+          <td>
+            <para style="P8">[[ -ct2 ]] </para>
+          </td>
+          <td>
+            <para style="P8">[[ acr ]]</para>
+          </td>
+          <td>
+            <para style="P8">[[-ct2- acr ]]</para>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <para style="P10">EN COURS DE PRODUCTION DE BIENS ET SERVICES</para>
+          </td>
+          <td>
+            <para style="P8">[[ -cu ]] </para>
+          </td>
+          <td>
+            <para style="P8">[[ acs ]]</para>
+          </td>
+          <td>
+            <para style="P8">[[ -cu- acs ]]</para>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <para style="P10">PRODUITS INTERMEDIAIRES ET FINIS</para>
+          </td>
+          <td>
+            <para style="P8">[[ -cv ]] </para>
+          </td>
+          <td>
+            <para style="P8">[[ act ]]</para>
+          </td>
+          <td>
+            <para style="P8">[[ -cv- act ]]</para>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <para style="P10">MARCHANDISES</para>
+          </td>
+          <td>
+            <para style="P8">[[ -cw ]] </para>
+          </td>
+          <td>
+            <para style="P8">[[ acu ]]</para>
+          </td>
+          <td>
+            <para style="P8">[[ -cw- acu ]]</para>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <para style="P10">AVANCES ET ACCOMPTES VERSÉS SUR COMMANDES</para>
+          </td>
+          <td>
+            <para style="P8">[[ -cag ]] </para>
+          </td>
+          <td>
+            <para style="P8">
+              <font color="white"> </font>
+            </para>
+          </td>
+          <td>
+            <para style="P8">[[ -cag ]]</para>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <para style="P14">CREANCES</para>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <para style="P10">CLIENTS ET COMPTES RATTACHES</para>
+          </td>
+          <td>
+            <para style="P8">[[ -cx ]] </para>
+          </td>
+          <td>
+            <para style="P8">[[ acv ]]</para>
+          </td>
+          <td>
+            <para style="P8">[[ -cx- acv ]]</para>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <para style="P10">AUTRES CREANCES</para>
+          </td>
+          <td>
+            <para style="P8">[[ -cy_solde + -cy_debit ]] </para>
+          </td>
+          <td>
+            <para style="P8">[[ acw ]]</para>
+          </td>
+          <td>
+            <para style="P8">[[ -cy_solde+-cy_debit - acw ]]</para>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <para style="P10">CAPITAL SOUSCRIT ET APPELE , NON VERSE</para>
+          </td>
+          <td>
+            <para style="P8">[[ -cz ]] </para>
+          </td>
+          <td>
+            <para style="P8">
+              <font color="white"> </font>
+            </para>
+          </td>
+          <td>
+            <para style="P8">[[ -cz ]]</para>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <para style="P10">VALEURS MOBILIERES DE PLACEMENT</para>
+          </td>
+          <td>
+            <para style="P8">
+              <font color="white"> </font>
+            </para>
+          </td>
+          <td>
+            <para style="P8">
+              <font color="white"> </font>
+            </para>
+          </td>
+          <td>
+            <para style="P8">
+              <font color="white"> </font>
+            </para>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <para style="P10">ACTIONS PROPRES</para>
+          </td>
+          <td>
+            <para style="P8">[[ -cab ]] </para>
+          </td>
+          <td>
+            <para style="P8">[[ acx ]]</para>
+          </td>
+          <td>
+            <para style="P8">[[ -cab- acx ]]</para>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <para style="P10">AUTRES TITRES</para>
+          </td>
+          <td>
+            <para style="P8">[[ -cac ]] </para>
+          </td>
+          <td>
+            <para style="P8">[[acy ]]</para>
+          </td>
+          <td>
+            <para style="P8">[[ -cac- acy ]]</para>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <para style="P10">INTRUMENTS DE TRESORERIE</para>
+          </td>
+          <td>
+            <para style="P8">[[ -cad ]] </para>
+          </td>
+          <td>
+            <para style="P8">
+              <font color="white"> </font>
+            </para>
+          </td>
+          <td>
+            <para style="P8">[[ -cad ]]</para>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <para style="P10">DISPONIBILITÉS</para>
+          </td>
+          <td>
+            <para style="P8">[[ -cae ]] </para>
+          </td>
+          <td>
+            <para style="P8">
+              <font color="white"> </font>
+            </para>
+          </td>
+          <td>
+            <para style="P8">[[ -cae ]]</para>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <para style="P10">CHARGES CONSTATEES D'AVANCE</para>
+          </td>
+          <td>
+            <para style="P8">[[ -caf ]] </para>
+          </td>
+          <td>
+            <para style="P8">
+              <font color="white"> </font>
+            </para>
+          </td>
+          <td>
+            <para style="P8">[[ -caf ]]</para>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <para style="P13">TOTAL II</para>
+          </td>
+          <td>
+            <para style="P8">[[ -tc2 ]]</para>
+          </td>
+          <td>
+            <para style="P8">[[ -atc2 ]]</para>
+          </td>
+          <td>
+            <para style="P8">[[ -tc2 + atc2 ]]</para>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <para style="P11">CHARGES A REPARTIR SUR PLUS. EXERCICES (III)</para>
+          </td>
+          <td>
+            <para style="P8">[[ -tc3 ]] </para>
+          </td>
+          <td>
+            <para style="P8">
+              <font color="white"> </font>
+            </para>
+          </td>
+          <td>
+            <para style="P8">[[ -tc3 ]]</para>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <para style="P11">PRIMES DE REMBOURSEMENT DES EMPRUNTS (IV)</para>
+          </td>
+          <td>
+            <para style="P8">[[ -tc4 ]] </para>
+          </td>
+          <td>
+            <para style="P8">
+              <font color="white"> </font>
+            </para>
+          </td>
+          <td>
+            <para style="P8">[[ -tc4 ]]</para>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <para style="P11">ECARTS DE CONVERSION ACTIF (V)</para>
+          </td>
+          <td>
+            <para style="P8">[[ -tc5 ]] </para>
+          </td>
+          <td>
+            <para style="P8">
+              <font color="white"> </font>
+            </para>
+          </td>
+          <td>
+            <para style="P8">[[ -tc5 ]]</para>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <para style="P18">TOTAL ACTIF ( I à V )</para>
+          </td>
+          <td>
+            <para style="P8">[[ -totalactif ]]</para>
+          </td>
+          <td>
+            <para style="P8">[[ totalactifamo ]]</para>
+          </td>
+          <td>
+            <para style="P8">[[ -totalactif-totalactifamo ]]</para>
+          </td>
+        </tr>
+      </blockTable>
+      <para style="P20">
+        <font color="white"> </font>
+      </para>
+      <para style="P20">Bilan</para>
+      <blockTable colWidths="482.0" repeatRows="1" style="Tableau1">
+        <tr>
+          <td>
+            <para style="Table Contents">[[ company.name ]] au <font face="Times-Roman" size="8.0">: 31/12/ [[ annee(data['form']) ]] </font><font face="Times-Roman" size="8.0">Imprimé</font><font face="Times-Roman" size="8.0"> le : [[ time.strftime('%Y-%m-%d') ]] at [[ time.strftime('%H:%M:%S') ]]</font></para>
+          </td>
+        </tr>
+      </blockTable>
+      <para style="P21">
+        <font color="white"> .........</font>
+      </para>
+      <blockTable colWidths="482.0" repeatRows="1" style="Tableau2">
+        <tr>
+          <td>
+            <para style="P6">PASSIF</para>
+          </td>
+        </tr>
+      </blockTable>
+      <para style="P7">CAPITAUX PROPRES</para>
+      <blockTable colWidths="211.0,270.0" style="Tableau3">
+        <tr>
+          <td>
+            <para style="P24">
+              <font color="white"> </font>
+            </para>
+          </td>
+          <td>
+            <para style="P4">
+              <font color="white"> </font>
+            </para>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <para style="P25">CAPITAL (DONT VERSÉ:...................)</para>
+          </td>
+          <td>
+            <para style="P9">[[ pa ]] </para>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <para style="P25">PRIMES D'EMISSION , DE FUSION , D'APPORT</para>
+          </td>
+          <td>
+            <para style="P9">[[ pb ]] </para>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <para style="P28">ECARTS DE REEVALUATION</para>
+          </td>
+          <td>
+            <para style="P9">[[ pc ]] </para>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <para style="P28">ECART D'ÉQUIVALENCE</para>
+          </td>
+          <td>
+            <para style="P9">[[ pd ]] </para>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <para style="P25">RÉSERVES</para>
+          </td>
+          <td>
+            <para style="P9">
+              <font color="white"> </font>
+            </para>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <para style="P28">RESERVE LEGALE</para>
+          </td>
+          <td>
+            <para style="P9">[[ pe ]]</para>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <para style="P28">RESERVES STATUTAIRES OU CONTRACTUELLES</para>
+          </td>
+          <td>
+            <para style="P9">[[ pf ]] </para>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <para style="P28">RESERVES REGLEMENTEES(</para>
+          </td>
+          <td>
+            <para style="P9">[[ pg ]] </para>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <para style="P25">AUTRES RESERVES</para>
+          </td>
+          <td>
+            <para style="P9">[[ ph ]]</para>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <para style="P25">REPORT A NOUVEAU</para>
+          </td>
+          <td>
+            <para style="P9">[[ pid ]]</para>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <para style="P29">RESULTAT DE L'EXERCICE (Bénéfice ou Perte)</para>
+            <para style="P26">
+              <font color="white"> </font>
+            </para>
+          </td>
+          <td>
+            <para style="P23">[[ resultatcr ]]</para>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <para style="P28">SUBVENTIONS D'INVESTISSEMENT</para>
+            <para style="P32">
+              <font color="white"> </font>
+            </para>
+          </td>
+          <td>
+            <para style="P9">[[ pk ]]</para>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <para style="P34">PROVISIONS REGLEMENTEES</para>
+            <para style="P33">
+              <font color="white"> </font>
+            </para>
+          </td>
+          <td>
+            <para style="P9">[[ pl ]]</para>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <para style="P26">Total I</para>
+          </td>
+          <td>
+            <para style="P9">[[ ptc1 + resultatcr ]]</para>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <para style="P30">AUTRES FONDS PROPRES</para>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <para style="P28">MONTANTS DES EMISSIONS DE TITRES PARTICIPATIFS</para>
+            <para style="P26">
+              <font color="white"> </font>
+            </para>
+          </td>
+          <td>
+            <para style="P9">
+              <font color="white"> </font>
+            </para>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <para style="P28">AVANCES CONDITIONNEES</para>
+          </td>
+          <td>
+            <para style="P9">[[ pn ]]</para>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <para style="P26">AUTRES</para>
+          </td>
+          <td>
+            <para style="P9">[[ po ]]</para>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <para style="P35">Total II</para>
+          </td>
+          <td>
+            <para style="P9">[[ ptc2 ]]</para>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <para style="P27">PROVISIONS</para>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <para style="P28">PROVISIONS POUR RISQUES</para>
+          </td>
+          <td>
+            <para style="P9">[[ pp ]]</para>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <para style="P28">PROVISIONS POUR CHARGES</para>
+          </td>
+          <td>
+            <para style="P9">[[ pq ]]</para>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <para style="P19">Total III</para>
+          </td>
+          <td>
+            <para style="P9">[[ ptc3 ]]</para>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <para style="P27">DETTES</para>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <para style="P31">EMPRUNTS OBLIGATAIRES CONVERTIBLES</para>
+          </td>
+          <td>
+            <para style="P9">[[ pr ]]</para>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <para style="P31">AUTRES EMPRUNTS OBLIGATAIRES</para>
+          </td>
+          <td>
+            <para style="P9">[[ ps ]]</para>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <para style="P31">EMPRUNTS ET DETTES AUPRES DES ETABLISSEMENTS DE CREDIT </para>
+          </td>
+          <td>
+            <para style="P9">[[ pr_solde+pr_credit ]]</para>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <para style="P31">EMPRUNTS ET DETTES FINANCIERES DIVERS</para>
+          </td>
+          <td>
+            <para style="P9">[[ ps_solde+ps_credit ]]</para>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <para style="P31">AVANCES ET ACOMPTES RECUS SUR COMMANDES EN COURS</para>
+          </td>
+          <td>
+            <para style="P9">[[ pt ]]</para>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <para style="P31">DETTES FOURNISSEURS ET COMPTES RATTACHES </para>
+          </td>
+          <td>
+            <para style="P9">[[ pu ]]</para>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <para style="P31">DETTES FISCALES ET SOCIALES</para>
+          </td>
+          <td>
+            <para style="P9">[[ pv_solde+pv_credit ]]</para>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <para style="P31">DETTES SUR IMMOBILISATIONS ET COMPTES RATTACHES </para>
+          </td>
+          <td>
+            <para style="P9">[[ pw ]]</para>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <para style="P31">AUTRES DETTES </para>
+          </td>
+          <td>
+            <para style="P9">[[ px_solde+px_credit ]]</para>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <para style="P31">INSTRUMENTS DE TRÉSORERIE</para>
+          </td>
+          <td>
+            <para style="P9">[[ py ]]</para>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <para style="P31">PRODUITS CONSTATES D'AVANCE </para>
+          </td>
+          <td>
+            <para style="P9">[[ pz ]]</para>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <para style="P36">Total IV</para>
+          </td>
+          <td>
+            <para style="P9">[[ ptc4 ]]</para>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <para style="P31">ECARTS DE CONVERSION PASSIF</para>
+            <para style="P25">
+              <font color="white"> </font>
+            </para>
+          </td>
+          <td>
+            <para style="P9">[[ paa ]]</para>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <para style="P37">Total V</para>
+          </td>
+          <td>
+            <para style="P9">[[ ptc5 ]]</para>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <para style="P18">TOTAL PASSIF ( I à V )</para>
+            <para style="P26">
+              <font color="white"> </font>
+            </para>
+          </td>
+          <td>
+            <para style="P9">[[ ptc1+ptc2+ptc3+ptc4+ptc5 +resultatcr ]]</para>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <para style="P18">Controle Bilan Compte de résultat </para>
+          </td>
+          <td>
+            <para style="P9">[[ resultatbilan - resultatcr ]]</para>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <para style="P18">
+              <font color="white"> </font>
+            </para>
+          </td>
+          <td>
+            <para style="P22">
+              <font color="white"> </font>
+            </para>
+          </td>
+        </tr>
+      </blockTable>
+      <para style="Standard">
+        <font color="white"> </font>
+      </para>
+    </section>
+  </story>
+</document>
+
